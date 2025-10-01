@@ -55,6 +55,12 @@
   transform: rotate(45deg);
 }
 
+@media(max-width: 460px){
+  .faq-container h2{
+    margin-left: 90px;
+  }
+}
+
 @media(max-width: 375px){
   .faq-container h2{
     margin-left: 70px;

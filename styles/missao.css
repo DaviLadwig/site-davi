@@ -33,6 +33,12 @@
     width: 40%;
 }
 
+@media(max-width: 460px){
+    .missao_principal img{
+        width: 400px;
+    }
+}
+
 @media (max-width:780px){
     .missao{
         width: 100%;
