@@ -115,7 +115,7 @@ nav.desktop-nav a:hover {
     transition: 0.5s;
 }
 
-.mobile-panel a:hover{
+.mobile-panel a:hover {
     color: #026b5a;
     transition: 0.5s;
 }
@@ -179,8 +179,61 @@ main {
     color: #fff
 }
 
-@media(max-width: 375px){
-    .brand img{
+@media(max-width: 375px) {
+
+    .mobile-panel {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 75%;
+        max-width: 300px;
+        height: 100vh;
+        background: #232427;
+        z-index: 999;
+        transition: transform .4s ease;
+        display: flex;
+        flex-direction: column;
+        padding: 3.5rem 1.25rem;
+        align-items: flex-start;
+        gap: 1rem;
+        transform: translateX(100%)
+    }
+
+    .mobile-panel a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.15rem;
+        padding: .6rem 0;
+        width: 100%;
+        transition: 0.5s;
+    }
+
+    .mobile-panel a:hover {
+        color: #026b5a;
+        transition: 0.5s;
+    }
+
+    .mobile-panel.open {
+        transform: translateX(0)
+    }
+
+
+    .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0);
+        pointer-events: none;
+        transition: background .35s;
+        z-index: 500
+    }
+
+    .overlay.show {
+        background: rgba(0, 0, 0, .45);
+        pointer-events: auto
+    }
+
+    .brand img {
         margin-left: -30px;
     }
 }
