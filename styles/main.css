@@ -1,0 +1,171 @@
+.corpo {
+    width: 100%;
+    height: 125vh;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 10px 10px 20px rgb(84, 83, 83);
+    color: black;
+}
+
+.corpo_principal {
+    margin-top: 80px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.imagem_corpo img {
+    width: 550px;
+    margin-top: 50px;
+    box-shadow: 10px 10px 20px rgb(84, 83, 83);
+    border-radius: 15px;
+}
+
+.div_introducao {
+    display: flex;
+}
+
+.div_texto {
+    padding-top: 100px;
+}
+
+.div_texto h1 {
+    font-family: "Archivo Black", sans-serif;
+    color: #232427;
+    font-weight: 500;
+    padding-bottom: 20px;
+    font-size: 5rem;
+}
+
+.div_texto span {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.div_texto ul {
+    list-style: none;
+}
+
+.div_texto li {
+    padding-top: 10px;
+    font-size: 1.4rem;
+}
+
+.btn-corpo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+
+}
+
+.btn-corpo-filho {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn-corpo-filho p {
+    padding-top: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+
+}
+
+.btn-corpo-filho button {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    background-color: #026b5a;
+    color: white;
+    transition: 0.6s;
+}
+
+.btn-corpo-filho button:hover {
+    transform: scale(1.1);
+    transition: 0.6s;
+}
+
+@media (max-width:780px) {
+    .corpo {
+        width: 100%;
+    }
+
+    .div_introducao {
+        width: 100%;
+    }
+
+    .div_introducao h1 {
+        font-size: 4rem;
+
+    }
+
+    .div_introducao li {
+        font-size: 1rem;
+    }
+
+    .div_introducao img {
+        display: none;
+    }
+}
+
+@media(max-width: 375px) {
+    .corpo {
+        padding-bottom: 50px;
+    }
+
+    .corpo_principal {
+        width: 100%;
+
+    }
+
+    .div_texto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .div_texto h1 {
+        font-size: 2.5rem;
+        margin-left: 20px;
+
+    }
+
+    .div_texto h2 {
+        font-size: 1.5rem;
+
+    }
+
+    .div_texto li {
+        margin-left: 20px;
+    }
+
+    .div_texto span {
+        font-size: 1rem;
+    }
+
+    .btn-corpo p {
+        font-size: 1rem;
+
+    }
+
+    .btn-corpo-filho {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+
+@media (max-width:1274px) {
+    .corpo{
+        height: 150vh;
+    }
+    
+}
