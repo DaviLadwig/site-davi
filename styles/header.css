@@ -116,7 +116,7 @@ nav.desktop-nav a:hover {
 }
 
 .mobile-panel a:hover {
-    color: #026b5a;
+    color: #086cef;
     transition: 0.5s;
 }
 
@@ -210,7 +210,7 @@ main {
     }
 
     .mobile-panel a:hover {
-        color: #026b5a;
+        color: #086cef;
         transition: 0.5s;
     }
 

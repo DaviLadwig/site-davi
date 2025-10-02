@@ -33,7 +33,7 @@
       padding-bottom: 40px;
       font-weight: bold;
       margin-bottom: 20px;
-      color: #027361;
+      color: #086cef;
   }
 
   .main-contacts {
@@ -59,7 +59,7 @@
   }
 
   .main-contacts a:hover {
-      background: #027361;
+      background:#086cef;
       color: #fff;
       transform: scale(1.05);
   }
@@ -85,7 +85,7 @@
   }
 
   .socials a:hover {
-      background: #027361;
+      background: #086cef;
       color: #fff;
       transform: scale(1.05);
       transition: 0.5s;

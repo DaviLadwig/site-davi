@@ -82,7 +82,7 @@
     border-radius: 10px;
     border: none;
     font-weight: bold;
-    background-color: #026b5a;
+    background-color: #086cef;
     color: white;
     transition: 0.6s;
 }
@@ -112,6 +112,7 @@
 
 @media(max-width: 375px) {
     .corpo {
+        height: 110vh;
         padding-bottom: 50px;
     }
 
