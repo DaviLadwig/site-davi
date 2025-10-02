@@ -19,6 +19,7 @@
     width: 70%;
     margin-top: 50px;
     gap: 40px;
+    
 }
 
 .missao_principal img{
@@ -67,7 +68,7 @@
 
 @media(max-width: 375px){
     .missao h1{
-        margin-left: 40px;
+        margin-left: 45px;
     }
 
     .missao_principal img{
@@ -84,4 +85,3 @@
         width: 80%;
     }
 }
-

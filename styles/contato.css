@@ -46,9 +46,9 @@
   }
 
   .main-contacts a {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
       text-decoration: none;
       color: #333;
       font-size: 16px;
@@ -59,21 +59,21 @@
   }
 
   .main-contacts a:hover {
-      background:#086cef;
+      background: #086cef;
       color: #fff;
       transform: scale(1.05);
   }
 
   .socials {
-    margin-top: 80px;
-    border: 4px solid;
+      margin-top: 80px;
+      border: 4px solid;
       display: flex;
       justify-content: space-between;
   }
 
   .socials a {
-    display: flex;
-    gap: 20px;
+      display: flex;
+      gap: 20px;
       text-decoration: none;
       font-size: 16px;
       color: #333;
@@ -81,7 +81,7 @@
       padding: 10px 15px;
       border-radius: 8px;
       transition: 0.5s;
-    
+
   }
 
   .socials a:hover {
@@ -91,40 +91,40 @@
       transition: 0.5s;
   }
 
-  @media (max-width: 768px){
-    #contact{
-        width: 100%;
-    }
+  @media (max-width: 768px) {
+      #contact {
+          width: 100%;
+      }
 
-    .contact-container{
-        width: 80%;
-    }
+      .contact-container {
+          width: 80%;
+      }
 
-    .main-contacts{
-        width: 70%;
-    }
+      .main-contacts {
+          width: 70%;
+      }
   }
 
-  @media(max-width: 375px){
+  @media(max-width: 375px) {
 
-    .contact-container{
-        width: 90%;
-    }
+      .contact-container {
+          width: 90%;
+      }
 
-    .contact-container span{
-        font-size: 2rem;
-    }
+      .contact-container span {
+          font-size: 2rem;
+      }
 
-    .contact-container a{
-        font-size: 1rem;
-    }
+      .contact-container a {
+          font-size: 1rem;
+      }
 
-    .main-contacts {
-      width: 100%;
-      margin-top: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-  }
+      .main-contacts {
+          width: 100%;
+          margin-top: 40px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+      }
 
   }
