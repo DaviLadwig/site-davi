@@ -67,7 +67,7 @@
 
 @media(max-width: 375px){
     .missao h1{
-        margin-left: 45px;
+        margin-left: 40px;
     }
 
     .missao_principal img{
@@ -84,3 +84,4 @@
         width: 80%;
     }
 }
+
