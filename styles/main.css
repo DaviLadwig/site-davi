@@ -1,6 +1,6 @@
 .corpo {
     width: 100%;
-    height: 125vh;
+    height: 132vh;
     display: flex;
     justify-content: center;
     background-color: white;
@@ -111,6 +111,13 @@
     }
 }
 
+@media(max-width: 420px){
+    .corpo{
+        width: 100%;
+        height: 160vh;
+    }
+}
+
 @media(max-width: 375px) {
     .corpo {
         height: 150vh;
@@ -158,6 +165,13 @@
     }
 
 
+}
+
+@media(max-width: 365px){
+    .corpo {
+        height: 150vh;
+        padding-bottom: 100px;
+    }
 }
 
 @media (max-width:780px) {

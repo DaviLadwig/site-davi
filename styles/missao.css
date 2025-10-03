@@ -40,6 +40,12 @@
     }
 }
 
+@media (max-width: 420px){
+    .missao h1{
+        margin-left: 17%;
+    }
+}
+
 @media (max-width:780px){
     .missao{
         width: 100%;

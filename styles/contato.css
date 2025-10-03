@@ -105,6 +105,13 @@
       }
   }
 
+
+  @media (max-width: 420px){
+    .main-contacts{
+        width: 100%;
+    }
+  }
+
   @media(max-width: 375px) {
 
       .contact-container {

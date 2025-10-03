@@ -1,4 +1,4 @@
- .services {
+ #services {
       padding-top: 100px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -44,6 +44,13 @@
     @media (max-width: 992px) {
       .services {
         grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 420px){
+      #services{
+        display: flex;
+        flex-direction: column;
       }
     }
 
