@@ -105,8 +105,25 @@
       }
   }
 
+  @media(max-width: 575px){
+    .main-contacts{
+        width: 100%;
+    }
+  }
+
+  @media(max-width: 525px){
+    .main-contacts{
+        width: 100%;
+    }
+  }
 
   @media (max-width: 420px){
+    .main-contacts{
+        width: 100%;
+    }
+  }
+
+  @media(max-width: 460px){
     .main-contacts{
         width: 100%;
     }
