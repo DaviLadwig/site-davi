@@ -1,6 +1,6 @@
 .corpo {
     width: 100%;
-    height: 132vh;
+    height: 130vh;
     display: flex;
     justify-content: center;
     background-color: white;
@@ -10,7 +10,6 @@
 }
 
 .corpo_principal {
-    margin-top: 80px;
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -177,7 +176,7 @@
 
 @media(max-width: 430.90px) {
     .corpo {
-        min-height: 110vh;
+        min-height: 120vh;
     }
 }
 
