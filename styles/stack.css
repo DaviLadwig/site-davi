@@ -1,0 +1,45 @@
+.logos {
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 50px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.logos {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 60px 0;
+    background-color: #cacccf;
+}
+
+.logos-slide img {
+    height: 50px;
+    margin: 0 40px;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.logos-slide {
+    animation: 35s slide infinite linear;
+    
+}
+
+
+.logos-slide img {
+    height: 50px;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+}
