@@ -1,61 +1,84 @@
  #services {
-      padding-top: 100px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
+   padding-top: 100px;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 20px;
+   max-width: 1200px;
+   margin: auto;
+ }
 
-    .card {
-      background: #fff;
-      padding: 30px 20px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
+ .card {
+   background: #fff;
+   padding: 30px 20px;
+   border-radius: 15px;
+   text-align: center;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   cursor: pointer;
+ }
 
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
+ .card:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+ }
 
-    .card i {
-      font-size: 40px;
-      color: #086cef;
-      margin-bottom: 15px;
-      transition: color 0.3s ease;
-    }
-    .card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      color: #333;
-    }
+ .card i {
+   font-size: 40px;
+   color: #086cef;
+   margin-bottom: 15px;
+   transition: color 0.3s ease;
+ }
 
-    .card p {
-      font-size: 0.95rem;
-      color: #555;
-      line-height: 1.5;
-    }
+ .card h3 {
+   font-size: 1.3rem;
+   margin-bottom: 10px;
+   color: #333;
+ }
 
-    /* Responsividade */
-    @media (max-width: 992px) {
-      .services {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
+ .card p {
+   font-size: 0.95rem;
+   color: #555;
+   line-height: 1.5;
+ }
 
-    @media (max-width: 420px){
-      #services{
-        display: flex;
-        flex-direction: column;
-      }
-    }
+ /* Responsividade */
+ @media (max-width: 480px) {
+   #services {
+     display: flex;
+     flex-direction: column;
+   }
+ }
 
-    @media (max-width: 600px) {
-      .services {
-        grid-template-columns: 1fr;
-      }
-    }
+ @media (max-width: 420px) {
+   #services {
+     display: flex;
+     flex-direction: column;
+   }
+ }
+
+  @media (max-width: 574px) {
+   #services {
+     display: flex;
+     flex-direction: column;
+   }
+ }
+
+ @media (max-width: 600px) {
+   #services {
+     display: flex;
+     flex-direction: column;
+   }
+ }
+
+  @media (max-width: 710px) {
+   #services {
+     display: flex;
+     flex-direction: column;
+   }
+ }
+
+ @media (max-width: 992px) {
+   .services {
+     grid-template-columns: repeat(2, 1fr);
+   }
+ }

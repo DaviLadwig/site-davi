@@ -112,14 +112,14 @@
     }
   }
 
-  @media(max-width: 375px) {
+  @media(max-width: 379px) {
 
       .contact-container {
           width: 90%;
       }
 
       .contact-container span {
-          font-size: 2rem;
+          font-size: 1.7rem;
       }
 
       .contact-container a {
