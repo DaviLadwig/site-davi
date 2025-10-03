@@ -252,9 +252,18 @@
 
 }
 
-@media(max-width: 375px){
+@media(max-width: 368px){
     .corpo{
-        min-height: 190vh;
+        min-height: 160vh;
+    }
+    
+    .btn-corpo-filho{
+        display: flex;
+        align-items: center;
+    }
+
+    .btn-corpo-filho p{
+        margin-left: 22px
     }
 }
 
