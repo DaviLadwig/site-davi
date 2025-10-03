@@ -251,10 +251,9 @@
 
 
 }
-
-@media(max-width: 368px){
+@media(max-width: 369.80px){
     .corpo{
-        min-height: 160vh;
+        min-height: 150vh;
     }
     
     .btn-corpo-filho{
@@ -267,16 +266,22 @@
     }
 }
 
-@media(max-width: 365px) {
+@media(max-width: 367px) {
     .corpo {
-        min-height: 150vh;
+        min-height: 120vh;
         padding-bottom: 100px;
     }
 
     .btn-corpo-filho p{
         margin-left: 10%;
     }
-} 
+}
+
+@media(max-width: 362.90px){
+    .corpo{
+        min-height: 150vh;
+    }
+}
 
 @media (max-width:775px){
     .corpo{
