@@ -155,9 +155,9 @@
     }
 }
 
-@media(max-width: 484px){
+@media(max-width: 487px){
     .corpo{
-        min-height: 120vh;
+        min-height: 160vh;
     }
 }
 
@@ -188,6 +188,7 @@
         height: 130vh;
     }
 }
+
 
 @media(max-width: 394px){
     .corpo{
@@ -259,7 +260,7 @@
 
 @media(max-width: 365px) {
     .corpo {
-        height: 120vh;
+        min-height: 150vh;
         padding-bottom: 100px;
     }
 
