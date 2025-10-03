@@ -174,18 +174,16 @@
     }
 }
 
-@media(max-width: 446px){
-    .corpo{
-        min-height: 160vh;
+
+@media(max-width: 430.90px) {
+    .corpo {
+        min-height: 110vh;
     }
 }
 
-
-
-@media(max-width: 420px) {
-    .corpo {
-        width: 100%;
-        height: 130vh;
+@media(max-width: 412px){
+    .corpo{
+        min-height: 120vh;
     }
 }
 
