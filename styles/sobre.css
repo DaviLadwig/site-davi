@@ -29,6 +29,26 @@
 
 }
 
+@media(max-width: 870px){
+    #sobre h1{
+        margin-left: 50px;
+    }
+
+    .sobre_principal{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .sobre_principal img{
+        width: 600px;
+    }
+
+    .sobre_txt{
+        width: 90%;
+    }
+}
+
 @media (max-width:780px){
     #sobre{
         width: 100%;

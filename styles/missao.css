@@ -35,6 +35,19 @@
     width: 40%;
 }
 
+
+@media(max-width: 870px){
+    .missao_principal{
+        display: flex;
+        flex-direction: column;
+        align-items: center ;
+    }
+
+    .missao_principal img{
+        width: 700px;
+    }
+}
+
 @media(max-width: 460px) {
     .missao_principal img {
         width: 400px;
