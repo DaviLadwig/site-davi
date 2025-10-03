@@ -5,9 +5,10 @@
     align-items: center;
 }
 
-.missao h1{
+.missao h1 {
     font-size: 3rem;
 }
+
 .missao span {
     font-size: 3rem;
     color: #086cef;
@@ -19,75 +20,92 @@
     width: 70%;
     margin-top: 50px;
     gap: 40px;
-    
+
 }
 
-.missao_principal img{
+.missao_principal img {
     width: 550px;
     border-radius: 15px;
     box-shadow: 10px 10px 20px rgb(84, 83, 83);
 }
 
-.missao_txt{
+.missao_txt {
     padding-top: 4px;
     font-size: 1.3rem;
     width: 40%;
 }
 
-@media(max-width: 460px){
-    .missao_principal img{
+@media(max-width: 460px) {
+    .missao_principal img {
         width: 400px;
     }
 }
 
-@media (max-width: 420px){
+@media(max-width: 446px) {
+
     .missao h1{
+        margin-left: 19%;
+    }
+}
+
+
+@media(max-width: 449px) {
+
+    .missao h1{
+        margin-left: 19%;
+    }
+}
+
+
+
+@media (max-width: 420px) {
+    .missao h1 {
         margin-left: 17%;
     }
 }
 
-@media (max-width:780px){
-    .missao{
+@media (max-width:780px) {
+    .missao {
         width: 100%;
     }
-    
-    .missao h1{
+
+    .missao h1 {
         font-size: 2.2rem;
     }
 
-    .missao span{
+    .missao span {
         font-size: 2.2rem;
     }
 
-    .missao_principal{
+    .missao_principal {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .missao_txt{
+    .missao_txt {
         width: 80%;
         font-size: 1rem;
     }
 }
 
-@media(max-width: 375px){
-    .missao h1{
+@media(max-width: 375px) {
+    .missao h1 {
         margin-left: 45px;
     }
 
-    .missao_principal img{
+    .missao_principal img {
         width: 300px;
     }
 }
 
 @media (max-width: 1274px) {
-    .missao_principal{
+    .missao_principal {
         width: 90%;
     }
-    
-    .missao_txt{
+
+    .missao_txt {
         width: 80%;
     }
 }

@@ -144,6 +144,20 @@
     }
 }
 
+@media(max-width: 462px){
+    .corpo{
+        width: 100%;
+        min-height: 160vh;
+    }
+}
+
+@media(max-width: 446px){
+    .corpo{
+        min-height: 160vh;
+    }
+}
+
+
 
 @media(max-width: 420px) {
     .corpo {
