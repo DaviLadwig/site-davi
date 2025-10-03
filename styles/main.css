@@ -109,10 +109,8 @@
 }
 
  @media (max-width: 489px) {
-    .corpo{
-        height: 120vh;
-    }
-     .btn-corpo-filho{
+
+    .btn-corpo-filho{
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -134,13 +132,15 @@
 
 @media(max-width: 490px){
 
-    .corpo{
-        height: 10vh;
-    }
-
     .btn-corpo-filho{
         display: flex;
         flex-direction: column;
+    }
+}
+
+@media(max-width: 484px){
+    .corpo{
+        min-height: 120vh;
     }
 }
 
