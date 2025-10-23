@@ -1,91 +1,57 @@
-#projeto{
-  display: flex;
-  justify-content: center;
+.projects {
   margin-top: 100px;
+  padding: 4rem 2rem;
+  background: #0b1020;
+  color: white;
+  text-align: center;
 }
 
-.carousel-container {
-      position: relative;
-      width: 100%;
-      max-width: 900px;
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
+.projects h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
 
-    .carousel-slide {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-    .carousel-slide img {
-      background-size: contain;
-      width: 100%;
-      border-radius: 12px;
-      flex-shrink: 0;
-    }
+.project-card {
+  background: #0b1020;
+  border: 1px solid #222;
+  border-left: 3px solid rgb(3, 3, 64);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 15px #086cef;
+  transition: all 0.3s ease;
+}
 
-    /* Botões de navegação */
-    .prev, .next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0,0,0,0.5);
-      color: #fff;
-      border: none;
-      font-size: 24px;
-      cursor: pointer;
-      padding: 10px;
-      border-radius: 50%;
-      z-index: 10;
-    }
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgb(89, 103, 231);
+}
 
-    .prev { left: 10px; }
-    .next { right: 10px; }
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
 
-    /* Texto abaixo do carrossel */
-    .carousel-text {
-      text-align: center;
-      margin-top: 20px;
-    }
+.project-card h3 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
 
-    .carousel-text h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-      color: #333;
-    }
-
-    .carousel-text p {
-      font-size: 1rem;
-      color: #555;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* Responsividade */
-    @media (max-width: 768px) {
-        #projeto{
-            margin-top: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-      .carousel-text h1 {
-        font-size: 1.5rem;
-      }
-      .carousel-text p {
-        font-size: 0.9rem;
-      }
-
-      .projeto_principal{
-        width: 90%;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .prev, .next {
-        font-size: 18px;
-        padding: 8px;
-      }
-    }
+.project-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
