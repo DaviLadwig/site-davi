@@ -15,6 +15,7 @@
 }
 
 
+
 nav.desktop-nav {
     display: flex;
     gap: .75rem
@@ -33,6 +34,8 @@ nav.desktop-nav a:hover {
 }
 
 
+
+
 .hamburger {
     width: 44px;
     height: 44px;
@@ -46,7 +49,7 @@ nav.desktop-nav a:hover {
 }
 
 .hamburger .box {
-    position: relative;
+    position: absolute;
     width: 22px;
     height: 14px
 }
@@ -62,35 +65,35 @@ nav.desktop-nav a:hover {
 }
 
 .hamburger .box span:nth-child(1) {
-    top: 0
+    top: 0;
 }
 
 .hamburger .box span:nth-child(2) {
-    top: 6px
+    top: 6px;
 }
 
 .hamburger .box span:nth-child(3) {
-    bottom: 0
+    bottom: 0;
 }
 
 .hamburger.open .box span:nth-child(1) {
-    transform: translateY(6px) rotate(45deg)
+    transform: translateY(6px) rotate(45deg);
 }
 
 .hamburger.open .box span:nth-child(2) {
     opacity: 0;
-    transform: scaleX(.2)
+    transform: scaleX(.2);
 }
 
 .hamburger.open .box span:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg)
+    transform: translateY(-6px) rotate(-45deg);
 }
 
 
 /* Painel mobile escondido fora da tela */
 .mobile-panel {
     position: fixed;
-    top: 0;
+    top: 8;
     right: 0;
     width: 75%;
     max-width: 300px;
@@ -134,36 +137,28 @@ nav.desktop-nav a:hover {
     pointer-events: auto
 }
 
-.hero {
-    height: 260px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #0f1724, #071126);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff
-}
+
 
 @media (max-width:780px) {
     nav.desktop-nav {
-        display: none
+        display: none;
     }
 
     .hamburger {
-        display: inline-flex
+        display: inline-flex;
     }
 }
 
 @media (min-width:781px) {
     .hamburger {
-        display: none
+        display: none;
     }
 
     .mobile-panel {
-        display: none
+        display: none;
     }
 
     .overlay {
-        display: none
+        display: none;
     }
 }

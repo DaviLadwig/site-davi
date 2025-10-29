@@ -1,0 +1,22 @@
+.buttons-link{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.btn-end{
+    border: 4PX solid;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #0b1020;
+    transition: 0.5s;
+}
+
+.btn-end:hover{
+    background-color: #086cef;
+    transition: 0.5s;
+}

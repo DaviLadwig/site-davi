@@ -23,20 +23,3 @@ body{
 h1{
     font-size: 3rem;
 }
-
-
-
-
-/*animações*/
-
-  @keyframes fadeInUp {
-      from {
-          opacity: 0;
-          transform: translateY(20px);
-      }
-
-      to {
-          opacity: 1;
-          transform: translateY(0);
-      }
-  }
