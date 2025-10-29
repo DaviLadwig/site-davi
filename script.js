@@ -34,6 +34,19 @@ btn.addEventListener('click', () => {
   else openMenu();
 })
 
+document.querySelectorAll('#mobilePanel a').forEach(link => {
+  link.addEventListener('click', closeMenu);
+});
+
+link.addEventListener('click', (e) => {
+  closeMenu();
+  setTimeout(() => {
+    window.location.href = link.href;
+  }, 300); // 300ms = tempo da animação
+  e.preventDefault();
+});
+
+
 
 overlay.addEventListener('click', closeMenu)
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu() });

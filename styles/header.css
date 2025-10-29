@@ -6,7 +6,7 @@
     background: #0b1020;
     color: #fff;
     position: relative;
-    z-index: 1000
+    z-index: 1001
 }
 
 .brand {
@@ -34,8 +34,6 @@ nav.desktop-nav a:hover {
 }
 
 
-
-
 .hamburger {
     width: 44px;
     height: 44px;
@@ -47,6 +45,7 @@ nav.desktop-nav a:hover {
     background: transparent;
     cursor: pointer
 }
+
 
 .hamburger .box {
     position: absolute;
@@ -92,23 +91,23 @@ nav.desktop-nav a:hover {
 
 /* Painel mobile escondido fora da tela */
 .mobile-panel {
-    position: fixed;
-    top: 8;
-    right: 0;
-    width: 75%;
-    max-width: 300px;
-    height: 100vh;
-    background: #0b1020;
-    z-index: 999;
-    transition: transform .4s ease;
-    display: flex;
-    flex-direction: column;
-    padding: 3.5rem 1.25rem;
-    align-items: flex-start;
-    gap: 1rem;
-    transform: translateX(100%);
-    /* totalmente fora da tela */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 75%;
+  max-width: 300px;
+  height: 70vh;
+  background: #0b1020;
+  z-index: 1000;
+  transition: transform .4s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 10rem 1.25rem 2rem; /* mais espaço em cima */
+  align-items: flex-start;
+  gap: 1rem;
+  transform: translateX(100%);
 }
+
 
 .mobile-panel a {
     color: #fff;
@@ -119,9 +118,8 @@ nav.desktop-nav a:hover {
 }
 
 .mobile-panel.open {
-    transform: translateX(0)
+    transform: translateX(0);
 }
-
 
 .overlay {
     position: fixed;
@@ -129,12 +127,18 @@ nav.desktop-nav a:hover {
     background: rgba(0, 0, 0, 0);
     pointer-events: none;
     transition: background .35s;
-    z-index: 500
+    z-index: 999;
 }
 
 .overlay.show {
     background: rgba(0, 0, 0, .45);
-    pointer-events: auto
+    pointer-events: auto;
+}
+
+/*PRIORIDADE CSS PARA ATIVAR O X DO MENU*/
+#hamburgerBtn {
+  position: relative;
+  z-index: 1101; /* acima do menu e overlay */
 }
 
 
