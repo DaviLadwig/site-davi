@@ -9,45 +9,25 @@ faqs.forEach(faq => {
 
 //carrossel
 
-//menu hamburguer
-const btn = document.getElementById('hamburgerBtn')
-const panel = document.getElementById('mobilePanel')
-const overlay = document.getElementById('overlay')
+// menu hamburguer
+const hamburger = document.getElementById("hamburger");
+const nav = document.querySelector("nav");
+const overlay = document.getElementById("overlay");
 
+const toggleMenu = () => {
+  nav.classList.toggle("active");
+  hamburger.classList.toggle("active");
+  overlay.classList.toggle("active");
+};
 
-function openMenu() {
-  btn.classList.add('open')
-  panel.classList.add('open')
-  overlay.classList.add('show')
-}
+hamburger.addEventListener("click", toggleMenu);
+overlay.addEventListener("click", toggleMenu);
 
-
-function closeMenu() {
-  btn.classList.remove('open')
-  panel.classList.remove('open')
-  overlay.classList.remove('show')
-}
-
-
-btn.addEventListener('click', () => {
-  if (panel.classList.contains('open')) closeMenu();
-  else openMenu();
-})
-
-document.querySelectorAll('#mobilePanel a').forEach(link => {
-  link.addEventListener('click', closeMenu);
+// Fechar o menu ao clicar em qualquer link
+nav.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("active");
+    hamburger.classList.remove("active");
+    overlay.classList.remove("active");
+  });
 });
-
-link.addEventListener('click', (e) => {
-  closeMenu();
-  setTimeout(() => {
-    window.location.href = link.href;
-  }, 300); // 300ms = tempo da animação
-  e.preventDefault();
-});
-
-
-
-overlay.addEventListener('click', closeMenu)
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu() });
-

@@ -1,55 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-     <header class="site-header">
-        <div class="brand">
-            <img src="images/davi-logo__1_-removebg-preview.png" alt="" width="250px">
+    <header>
+        <div class="logo">
+            <img src="images/davi-logo__1_-removebg-preview.png" alt="logo">
         </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#services">Serviços</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="contato.html">Contato</a>
 
-        <nav class="desktop-nav">
-            <a href="index.html">Inicio</a>
-            <a href="projetos.html" target="_blank">Projetos</a>
-            <a href="contato.html" target="_blank">Contato</a>
         </nav>
-        <button class="hamburger" id="hamburgerBtn">
-            <span class="box">
-                <span></span>
-                <span></span>
-                <span></span>
-            </span>
-        </button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
-
-    <div id="mobilePanel" class="mobile-panel">
-        <a href="index.html">Inicio</a>
-        <a href="projetos.html" target="_blank">Projetos</a>
-        <a href="#contact" target="_blank">Contato</a>
-        <a href="https://wa.me/5598991713898?text=Ol%C3%A1%20Davi,%20gostaria%20de%20agendar%20uma%20consultoria%20gratuita%20para%20falarmos%20sobre%20meu%20projeto."
-            class="cta">Solicitar Orçamento</a>
-    </div>
-
+    <div class="overlay" id="overlay"></div>
 
     <div id="overlay" class="overlay"></div>
     <!--ENTRE EM CONTATO-->
     <div id="contact">
         <div class="contact-container">
             <span style="font-size: 2.3rem;">Entre em contato e vamos conversar!</span>
-
+            <p>Envie uma mensagem ou preencha o formulário👇</p>
             <div class="main-contacts">
                 <a href="https://wa.me/5598991713898?text=Ol%C3%A1%20Davi,%20gostaria%20de%20agendar%20uma%20consultoria%20gratuita%20para%20falarmos%20sobre%20meu%20projeto."
                     target="_blank"><img src="images/whatsapp (1).png" alt="whatsapp-icone" width="20px"> WhatsApp: (98)
                     99171-3898</a>
                 <a href="mailto:contato@empresa.com"><img src="images/correspondencia.png" alt="E-mail-icone"
                         width="20px"> E-mail: daviladwig@dev.com</a>
-                <span style="padding-top: 60px; font-size: 1.6rem;">Ou entre aqui👇</span>
                 <a href="https://forms.gle/pKrixPPfCWCUCy8x9" target="_blank"><img
                         src="images/formularios-do-google.png" alt="formulário-ion" width="20px"> Formulário</a>
             </div>
@@ -61,8 +54,9 @@
         <p> Todos od direitos reservados - <span style="font-weight: bold; color: #086cef;">Davi Ladwig</span></p>
     </footer>
 
-    
+
 
     <script src="script.js"></script>
 </body>
+
 </html>

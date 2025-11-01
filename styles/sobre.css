@@ -9,7 +9,7 @@
 
 .sobre_principal{
     padding-top: 70px;
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -17,17 +17,18 @@
 }
 
 .sobre_principal img{
-    width: 400px;
+    width: 500px;
     border-radius: 15px;
     box-shadow: 10px 10px 20px rgb(84, 83, 83);
 }
 
 .sobre_txt{
     width: 30%;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     padding-top: 30px;
 
 }
+
 
 @media(max-width: 870px){
     #sobre h1{
@@ -73,6 +74,13 @@
 
     .sobre_txt{
         width: 90%;
+    }
+}
+
+@media(max-width: 415px){
+
+    .sobre-imagem img{
+        width: 350px;
     }
 }
 

@@ -1,47 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos Davi Ladwig</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body{
+        body {
             background-color: #0b1020;
         }
     </style>
 </head>
 <body>
-    
-    <header class="site-header">
-        <div class="brand">
-            <img src="images/davi-logo__1_-removebg-preview.png" alt="" width="250px">
-        </div>
 
-        <nav class="desktop-nav">
-            <a href="index.html">Inicio</a>
-            <a href="contato.html" target="_blank">Contato</a>
+    <header>
+        <div class="logo">
+            <img src="images/davi-logo__1_-removebg-preview.png" alt="logo">
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#services">Serviços</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="contato.html">Contato</a>
+
         </nav>
-        <button class="hamburger" id="hamburgerBtn">
-            <span class="box">
-                <span></span>
-                <span></span>
-                <span></span>
-            </span>
-        </button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
+    <div class="overlay" id="overlay"></div>
 
-    <div id="mobilePanel" class="mobile-panel">
-        <a href="index.html">Inicio</a>
-        <a href="contato.html" target="_blank">Contato</a>
-        <a href="https://wa.me/5598991713898?text=Ol%C3%A1%20Davi,%20gostaria%20de%20agendar%20uma%20consultoria%20gratuita%20para%20falarmos%20sobre%20meu%20projeto."
-            class="cta">Solicitar Orçamento</a>
-    </div>
-
-
-    <div id="overlay" class="overlay"></div>
-      <!--PROJETOS-->
     <section class="projects">
         <h2>Meus Projetos</h2>
 
@@ -62,7 +55,8 @@
             <div class="project-card">
                 <img src="images/erp.jpg" alt="Projeto 3">
                 <h3>Sistema ERP</h3>
-                <p>Sistema de gestão que navega em diferentes setores para coletar informações para analisar dados e tomar decisões.
+                <p>Sistema de gestão que navega em diferentes setores para coletar informações para analisar dados e
+                    tomar decisões.
                 </p>
             </div>
 
@@ -96,4 +90,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>

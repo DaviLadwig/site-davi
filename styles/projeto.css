@@ -4,6 +4,20 @@
   background: #0b1020;
   color: white;
   text-align: center;
+
+  position: relative;
+  background: radial-gradient(circle at center, #0b1020, #000);
+  overflow: hidden;
+}
+
+.projects::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: moveDots 8s linear infinite;
+  opacity: 0.3;
 }
 
 .projects h2 {
@@ -21,7 +35,8 @@
 }
 
 .project-card {
-  background: #0b1020;
+  position: relative;
+  backdrop-filter: blur(2px);
   border: 1px solid #222;
   border-left: 3px solid rgb(3, 3, 64);
   border-radius: 12px;

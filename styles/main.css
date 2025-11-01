@@ -1,5 +1,6 @@
 .corpo {
-    padding-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 100px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -8,6 +9,32 @@
     color: white;
 
 }
+
+/*FUNDO ESTRELADO*/
+
+.corpo {
+  position: relative;
+  background: radial-gradient(circle at center, #0a0f1f, #000);
+  overflow: hidden;
+}
+
+.corpo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: moveDots 8s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes moveDots {
+  from { transform: translate(0, 0); }
+  to { transform: translate(40px, 40px); }
+}
+
+/**/
+
 
 .corpo_principal {
     margin-top: 50px;
@@ -34,7 +61,7 @@
     color: white;
     font-weight: 500;
     padding-bottom: 20px;
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 .div_texto span {
@@ -51,6 +78,27 @@
     font-size: 1.4rem;
 }
 
+.div_texto img{
+    width: 500px;
+
+}
+
+.video-for-cell{
+    display: none;
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(1, 11, 54, 0.664);  
+}
+
+.video-for-desk{
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(1, 11, 54, 0.664);
+}
+
 .btn-corpo {
     width: 100%;
     display: flex;
@@ -60,6 +108,7 @@
 }
 
 .btn-corpo-filho {
+    padding-bottom: 20px;
     width: 80%;
     display: flex;
     justify-content: center;
@@ -109,6 +158,10 @@
         width: 100%;
         height: 105%;
         align-items: center;
+    }
+
+    .div_texto h1{
+        font-size: 3rem;
     }
     
     .btn-corpo{
@@ -189,7 +242,7 @@
     }
 
     .div_introducao h1 {
-        font-size: 4rem;
+        font-size: 3rem;
 
     }
 
@@ -219,18 +272,27 @@
         display: flex;
         flex-direction: column;
      }
+     
  }
 
 @media(max-width: 470px) {
     .corpo{
         width: 100%;
-        height: 120vh;
+        height: 100%;
     }
 
     .btn-corpo-filho {
         display: flex;
         flex-direction: column;
 
+    }
+
+    .div_texto h1{
+        font-size: 2.5rem;
+    }
+
+    .video-for-desk{
+        border: 4px solid red;
     }
 }
 
@@ -252,6 +314,15 @@
     .corpo{
         min-height: 160vh;
     }
+    
+    .video-for-cell{
+        display: flex;
+
+     }
+
+     .video-for-desk{
+        display: none;
+     }
 }
 
 @media(max-width: 464px){
