@@ -84,7 +84,7 @@
      top: 0;
      right: 0;
      height: 100vh;
-     width: 40%;
+     width: 60%;
      background: #01030a;
      flex-direction: column;
      align-items: center;
@@ -98,15 +98,41 @@
      
    }
 
+    nav {
+    position: relative;
+    z-index: 1100; /* acima do overlay */
+  }
+
    nav.active {
      transform: translateX(0);
-     display: flex;
    }
 
    .hamburger {
-     display: flex;
+     display: none;
    }
+
+   
  }
+
+ 
+@media (min-width: 1225px) {
+  nav {
+    position: relative;
+    z-index: 1100; /* acima do overlay */
+  }
+
+  .overlay {
+    display: none !important;
+    z-index: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  .hamburger {
+    display: none !important;
+  }
+}
+
 
  /* Animação do ícone ao abrir */
  .hamburger.active span:nth-child(1) {
@@ -142,13 +168,20 @@
  }
 
 
+
  @media(max-width:554px) {
+  
    .logo img {
      width: 300px;
 
    }
 
  }
+
+ @media(max-width: 540px){
+
+   
+}
 
 
  @media(max-width: 458px) {

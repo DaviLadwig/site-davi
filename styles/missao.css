@@ -48,6 +48,17 @@
     }
 }
 
+@media(max-width: 540px){
+
+    .missao{
+        width: 100%;
+    }
+    
+    .missao_principal img{
+        width: 450px;
+    }
+}
+
 @media(max-width: 460px) {
     .missao_principal img {
         width: 400px;

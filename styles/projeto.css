@@ -70,3 +70,21 @@
   font-size: 0.95rem;
   line-height: 1.5;
 }
+
+.link-project{
+  background-color: #051033;
+  font-size: 1rem;
+  padding: 7px;
+  font-weight: 700;
+  margin-top: 50px;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.6s;
+}
+
+.link-project:hover{
+  background-color: #086cef;
+  color: #ffffff;
+  transition: 0.5s;
+}

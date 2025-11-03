@@ -56,6 +56,18 @@
    }
  }
 
+ @media(max-width: 540px){
+
+    #services{
+      display: flex;
+      align-items: center;
+    }
+    .card{
+      width: 95%;
+    }
+}
+
+
   @media (max-width: 574px) {
    #services {
      display: flex;
