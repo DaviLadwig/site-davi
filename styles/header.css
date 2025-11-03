@@ -39,12 +39,23 @@
    color: white;
    font-size: 1.3rem;
    transition: color 0.3s;
+   transition: 0.3s;
  }
 
  nav a:hover {
    color: #086cef ;
+   transition: 0.5s
 
  }
+
+ a {
+    text-decoration: none;
+    transition: all 0.4s;
+  }
+
+  a:hover {
+    letter-spacing: 4px;
+  }
 
  .logo img {
    width: 350px;
@@ -166,7 +177,6 @@
    opacity: 1;
    pointer-events: all;
  }
-
 
 
  @media(max-width:554px) {
