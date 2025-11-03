@@ -213,7 +213,7 @@
 
 @media(max-width: 870px){
     .corpo{
-        min-height: 90vh;
+        min-height: 100%;
     }
 }
 
@@ -266,6 +266,13 @@
 }
 
 
+@media(max-width:540px){
+    .corpo{
+        width: 100%;
+        height: 100%;
+    }
+}
+
  @media (max-width: 489px) {
 
     .btn-corpo-filho{
@@ -310,7 +317,7 @@
 
 @media(max-width: 471px){
     .corpo{
-        min-height: 160vh;
+        height: 100%;
     }
     
     .video-for-cell{
@@ -327,7 +334,7 @@
     .corpo{
         color: white;
         width: 100%;
-        min-height: 120vh;
+        height: 100%;
         background-color: #0b1020 ;
     }
 
@@ -343,33 +350,33 @@
 
 @media(max-width: 430.90px) {
     .corpo {
-        min-height: 120vh;
+        height: 100%;
     }
 }
 
 @media(max-width: 412px){
     .corpo{
-        min-height: 120vh;
+       height: 100%;
     }
 }
 
 
 @media(max-width: 394px){
     .corpo{
-        min-height: 180vh
+       height: 100%;
     }
 }
 
 @media(max-width: 390px) {
     .corpo {
         width: 100%;
-        height: 140vh;
+        height: 100%;
     }
 }
 
 @media(max-width: 370px) {
     .corpo {
-        height: 120vh;
+         height: 100%;
         padding-bottom: 100px;
     }
 
@@ -417,7 +424,7 @@
 }
 @media(max-width: 369.80px){
     .corpo{
-        min-height: 150vh;
+        height: 100%;
     }
     
     .btn-corpo-filho{

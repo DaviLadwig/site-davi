@@ -15,16 +15,6 @@
    overflow: hidden;
  }
 
- header::before {
-   content: "";
-   position: absolute;
-   inset: 0;
-   background-image: radial-gradient(white 1px, transparent 1px);
-   background-size: 40px 40px;
-   animation: moveDots 8s linear infinite;
-   opacity: 0.3;
- }
-
  nav {
    display: flex;
    align-items: center;
@@ -81,7 +71,7 @@
      position: fixed;
      top: 0;
      right: 0;
-     height: 100vh;
+     height: 100%;
      width: 60%;
      background: #01030a;
      flex-direction: column;
@@ -135,7 +125,8 @@
    pointer-events: all;
  }
 
- @media(max-width:554px) {
+ @media(max-width:540px){
+
    .logo img {
      width: 300px;
    }
