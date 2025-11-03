@@ -32,3 +32,10 @@ nav.querySelectorAll("a").forEach(link => {
   });
 });
 
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 1224) {
+    nav.classList.remove("active");
+    hamburger.classList.remove("active");
+    overlay.classList.remove("active");
+  }
+});

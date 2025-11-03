@@ -8,8 +8,7 @@
    position: relative;
    top: 0;
    left: 0;
-   z-index: 1000;
-
+   z-index: 2000;
    /*efeito*/
    position: relative;
    background: radial-gradient(circle at center, #0b1020, #000);
@@ -17,45 +16,35 @@
  }
 
  header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(white 1px, transparent 1px);
-  background-size: 40px 40px;
-  animation: moveDots 8s linear infinite;
-  opacity: 0.3;
-}
+   content: "";
+   position: absolute;
+   inset: 0;
+   background-image: radial-gradient(white 1px, transparent 1px);
+   background-size: 40px 40px;
+   animation: moveDots 8s linear infinite;
+   opacity: 0.3;
+ }
 
  nav {
    display: flex;
    align-items: center;
    gap: 2rem;
    width: 40%;
-   
+   z-index: 1500;
  }
+
+
 
  nav a {
    text-decoration: none;
    color: white;
    font-size: 1.3rem;
    transition: color 0.3s;
-   transition: 0.3s;
  }
 
  nav a:hover {
-   color: #086cef ;
-   transition: 0.5s
-
+   color: #086cef;
  }
-
- a {
-    text-decoration: none;
-    transition: all 0.4s;
-  }
-
-  a:hover {
-    letter-spacing: 4px;
-  }
 
  .logo img {
    width: 350px;
@@ -67,8 +56,7 @@
    flex-direction: column;
    cursor: pointer;
    gap: 6px;
-   z-index: 1100;
-   
+   z-index: 1600;
  }
 
  .hamburger span {
@@ -81,12 +69,11 @@
 
  /* Menu lateral (mobile) */
  @media (max-width: 1224px) {
-
    .logo img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 10px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding-top: 10px;
      width: 350px;
    }
 
@@ -105,45 +92,16 @@
      transform: translateX(100%);
      transition: transform 0.4s ease;
      font-family: "Archivo Black", sans-serif;
-
-     
    }
-
-    nav {
-    position: relative;
-    z-index: 1100; /* acima do overlay */
-  }
 
    nav.active {
      transform: translateX(0);
    }
 
    .hamburger {
-     display: none;
+     display: flex;
    }
-
-   
  }
-
- 
-@media (min-width: 1225px) {
-  nav {
-    position: relative;
-    z-index: 1100; /* acima do overlay */
-  }
-
-  .overlay {
-    display: none !important;
-    z-index: 0 !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-  }
-
-  .hamburger {
-    display: none !important;
-  }
-}
-
 
  /* Animação do ícone ao abrir */
  .hamburger.active span:nth-child(1) {
@@ -170,7 +128,6 @@
    pointer-events: none;
    transition: opacity 0.4s ease;
    z-index: 900;
-   
  }
 
  .overlay.active {
@@ -178,53 +135,90 @@
    pointer-events: all;
  }
 
-
  @media(max-width:554px) {
-  
    .logo img {
      width: 300px;
-
    }
-
  }
-
- @media(max-width: 540px){
-
-   
-}
-
 
  @media(max-width: 458px) {
    .logo img {
      width: 300px;
    }
-
  }
 
- @media(max-width: 414px){
-    .logo{
-      width: 200px;
-    }
+ @media(max-width: 414px) {
+   .logo {
+     width: 200px;
+   }
  }
 
  @media(max-width: 403px) {
    .logo img {
      width: 350px;
    }
-
  }
 
  @media(max-width: 398px) {
    .logo img {
      width: 300px;
    }
-
  }
-
-
 
  @media(max-width: 354px) {
    .logo img {
      width: 240px;
    }
+
+
+   /*codigo antigo*/
+   /* Garante que o menu e seus links fiquem clicáveis no desktop */
+   @media (min-width: 1225px) {
+     nav {
+       position: relative !important;
+       transform: none !important;
+       display: flex !important;
+       align-items: center;
+       justify-content: flex-end;
+       gap: 2rem;
+       width: auto;
+       height: auto;
+       background: transparent !important;
+       z-index: 1100;
+     }
+
+     .hamburger {
+       display: none !important;
+     }
+
+     .overlay {
+       display: none !important;
+       opacity: 0 !important;
+       pointer-events: none !important;
+     }
+   }
+
+
+
+   nav {
+     display: flex;
+     align-items: center;
+     gap: 2rem;
+     width: 40%;
+
+   }
+
+   nav a {
+     text-decoration: none;
+     color: white;
+     font-size: 1.3rem;
+     transition: color 0.3s;
+     transition: 0.3s;
+   }
+
+   nav a:hover {
+     color: #086cef;
+     transition: 0.5s;
+   }
+
  }
