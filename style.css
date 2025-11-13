@@ -11,3 +11,24 @@
 @import url('styles/contato.css');
 @import url('styles/stack.css');
 @import url('styles/buttons_end.css');
+
+/* ======== ANIMAÇÕES DE ENTRADA ======== */
+.reveal-left, .reveal-right, .reveal-up, .reveal-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.9s ease;
+}
+
+/* Direções diferentes */
+.reveal-left { transform: translateX(-60px); }
+.reveal-right { transform: translateX(60px); }
+.reveal-up { transform: translateY(60px); }
+.reveal-fade { transform: scale(0.95); }
+.reveal-down { transform: translateY(-80px); }
+
+/* Quando entra na tela */
+.reveal.active {
+  opacity: 1;
+  transform: translate(0);
+  scale: 1;
+}

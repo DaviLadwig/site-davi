@@ -39,3 +39,25 @@ window.addEventListener("resize", () => {
     overlay.classList.remove("active");
   }
 });
+
+
+//ANIMAÇÕES
+
+  const reveals = document.querySelectorAll('.reveal-left, .reveal-right, .reveal-up, .reveal-fade');
+
+  function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+    const revealPoint = 120; // quanto antes a animação inicia
+
+    reveals.forEach((reveal) => {
+      const revealTop = reveal.getBoundingClientRect().top;
+
+      if (revealTop < windowHeight - revealPoint) {
+        reveal.classList.add('active');
+        reveal.classList.add('reveal'); // ativa o estado CSS
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
