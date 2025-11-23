@@ -2,7 +2,7 @@
    width: 80%;
    padding-top: 100px;
    display: grid;
-   grid-template-columns: repeat(4, 1fr);
+   grid-template-columns: repeat(3, 1fr);
    gap: 20px;
    height: 100%;
    margin: auto;
@@ -10,7 +10,7 @@
 
  .card {
    background: #fff;
-   padding: 30px 20px;
+   padding: 30px 50px;
    border-radius: 15px;
    text-align: center;
    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -40,6 +40,17 @@
    font-size: 0.95rem;
    color: #555;
    line-height: 1.5;
+ }
+
+ .txt-servico{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+ }
+
+ .txt-servico h1{
+  font-size: 2.5rem;
  }
 
  /* Responsividade */
