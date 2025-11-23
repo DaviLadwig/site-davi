@@ -16,8 +16,6 @@
         </div>
         <nav>
             <a href="index.html">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#services">Serviços</a>
             <a href="projetos.html">Projetos</a>
             <a href="contato.html">Contato</a>
 
@@ -37,13 +35,63 @@
             <span style="font-size: 2.3rem;">Entre em contato e vamos conversar!</span>
             <p>preencha o formulário👇</p>
             <div class="main-contacts">
-                 <a href="https://forms.gle/pKrixPPfCWCUCy8x9" target="_blank"><img
-                        src="images/formularios-do-google.png" alt="formulário-ion" width="20px"> Formulário</a>
+
+                <section class="form-section">
+
+                    <form id="contactForm" class="contact-form">
+
+                        <div class="input-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="whatsapp">WhatsApp</label>
+                            <input type="text" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem..."
+                                required></textarea>
+                        </div>
+
+                        <!-- CONFIGURAÇÕES OBRIGATÓRIAS -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="box">
+                        <input type="hidden" name="_subject" value="Novo contato do site">
+
+                        <button type="submit" class="btn-form">Enviar Mensagem</button>
+                    </form>
+
+                    <!-- MODAL DE SUCESSO -->
+                    <div id="successModal" class="modal">
+                        <div class="modal-content">
+                            <h2 style="color: black;">Formulário enviado com sucesso 🚀</h2>
+                            <p style="color: black;">Em breve nossa equipe entrará em contato com você.</p>
+                            <button onclick="window.location.href='index.html'">Voltar ao início</button>
+                        </div>
+                    </div>
+
+                </section>
+
                 <a href="https://wa.me/5598991713898?text=Ol%C3%A1%20Davi,%20gostaria%20de%20agendar%20uma%20consultoria%20gratuita%20para%20falarmos%20sobre%20meu%20projeto."
-                    target="_blank"><img src="images/whatsapp (1).png" alt="whatsapp-icone" width="20px">Somente dúvidas ou suporte</a>
+                    target="_blank"><img src="images/whatsapp (1).png" alt="whatsapp-icone" width="20px">Somente
+                    dúvidas
+                    ou suporte
+                </a>
                 <a href="mailto:contato@empresa.com"><img src="images/correspondencia.png" alt="E-mail-icone"
-                        width="20px"> E-mail: daviladwigdev@gmail.com</a>
-               
+                        width="20px"> E-mail: daviladwigdev@gmail.com
+                </a>
+
+
+
+                </section>
             </div>
 
         </div>

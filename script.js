@@ -43,21 +43,68 @@ window.addEventListener("resize", () => {
 
 //ANIMAÇÕES
 
-  const reveals = document.querySelectorAll('.reveal-left, .reveal-right, .reveal-up, .reveal-fade');
+const reveals = document.querySelectorAll('.reveal-left, .reveal-right, .reveal-up, .reveal-fade');
 
-  function revealOnScroll() {
-    const windowHeight = window.innerHeight;
-    const revealPoint = 120; // quanto antes a animação inicia
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+  const revealPoint = 120; // quanto antes a animação inicia
 
-    reveals.forEach((reveal) => {
-      const revealTop = reveal.getBoundingClientRect().top;
+  reveals.forEach((reveal) => {
+    const revealTop = reveal.getBoundingClientRect().top;
 
-      if (revealTop < windowHeight - revealPoint) {
-        reveal.classList.add('active');
-        reveal.classList.add('reveal'); // ativa o estado CSS
-      }
+    if (revealTop < windowHeight - revealPoint) {
+      reveal.classList.add('active');
+      reveal.classList.add('reveal'); // ativa o estado CSS
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+
+//ANIMAÇÃO CARD
+
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.2 // ativa quando 20% do card aparece
+});
+
+cards.forEach(card => {
+  observer.observe(card);
+});
+
+
+//SUBMMIT + MODAL
+
+const form = document.getElementById("contactForm");
+const modal = document.getElementById("successModal");
+
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch("https://formsubmit.co/daviladwigdev@gmail.com", {
+      method: "POST",
+      body: formData
     });
-  }
 
-  window.addEventListener('scroll', revealOnScroll);
-  window.addEventListener('load', revealOnScroll);
+    if (response.ok) {
+      modal.style.display = "flex";
+      form.reset();
+    } else {
+      alert("Ocorreu um erro ao enviar. Tente novamente.");
+    }
+
+  } catch (error) {
+    alert("Erro de conexão. Tente novamente.");
+  }
+});
