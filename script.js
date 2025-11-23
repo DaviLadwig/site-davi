@@ -108,3 +108,6 @@ form.addEventListener("submit", async function (e) {
     alert("Erro de conexão. Tente novamente.");
   }
 });
+
+
+
