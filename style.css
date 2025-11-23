@@ -12,6 +12,7 @@
 @import url('styles/stack.css');
 @import url('styles/buttons_end.css');
 @import url('styles/cards.css');
+@import url('styles/copy.css');
 
 /* ======== ANIMAÇÕES DE ENTRADA ======== */
 .reveal-left, .reveal-right, .reveal-up, .reveal-fade {

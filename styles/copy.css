@@ -1,0 +1,9 @@
+.rdp{
+    width: 100%;
+    color: white;
+    height: 10vh;
+    display: flex;
+    background-color: #0b1020;
+    align-items: center;
+    justify-content: center;
+}
