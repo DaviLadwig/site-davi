@@ -236,6 +236,11 @@
 }
 
 @media(max-width: 460px) {
+
+    .contact-container{
+        width: 97%;
+    }
+
     .main-contacts {
         width: 100%;
     }
