@@ -23,7 +23,7 @@
 .carousel-track {
     display: flex;
     gap: 20px;
-    animation: slide 25s linear infinite;
+    animation: slide 30s linear infinite;
 }
 
 @keyframes slide {
