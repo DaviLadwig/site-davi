@@ -61,6 +61,10 @@
    }
  }
 
+ .txt-servico h1{
+  font-size: 2rem;
+ }
+
  @media (max-width: 420px) {
    #services {
      display: flex;
