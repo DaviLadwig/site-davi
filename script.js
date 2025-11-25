@@ -109,5 +109,7 @@ form.addEventListener("submit", async function (e) {
   }
 });
 
+//ANIMAÇÃO AVALIAÇÕES
+
 
 
