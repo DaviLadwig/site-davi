@@ -6,7 +6,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 html{
@@ -19,6 +18,7 @@ body{
     overflow-x: hidden;
     line-height:1.4;
     background-color: rgb(246, 251, 255);
+    overflow-x: hidden;
 }
 
 h1{
