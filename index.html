@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
+
 <body>
 
     <!--INICIO HEADER-->
 
-    <header>
+    <header class="cabecalho-principal">
         <div class="logo">
             <img src="images/davi-logo__1_-removebg-preview.png" alt="logo">
         </div>
@@ -58,19 +59,22 @@
 
     <!--MINHA MISSÃO-->
     <div class="missao">
-        <h1 class="reveal-right">Minha missão enquanto </h1><span class="reveal-right">desenvolvedor</span>
+        <h1 class="reveal-right">O que eu faço e quais </h1><span class="reveal-right">serviços eu presto</span>
         <div class="missao_principal">
             <div>
                 <img src="images/missao-dev.jpeg" alt="img_ilustrate" class="reveal-up">
             </div>
 
             <div class="missao_txt reveal-left">
-                <p>Minha missão é usar a tecnologia de forma simples e inteligente para ajudar pessoas e negócios a
-                    ganharem espaço no mundo digital. Gosto de ouvir, entender a necessidade real de cada projeto e
-                    transformar isso em algo funcional, bonito e que faça sentido.
-                    Mais do que entregar um site ou sistema, meu foco está em criar soluções que tenham propósito,
-                    que
-                    transmitam confiança e que façam diferença.
+                <p> Eu desenvolvo <strong>sites profissionais</strong>, <strong>landing pages otimizadas</strong> e
+                    <strong>sistemas personalizados</strong> feitos sob medida para empresas e profissionais que
+                    precisam
+                    de tecnologia para crescer. Também trabalho com <strong>automação inteligente</strong> incluindo
+                    integrações
+                    com WhatsApp, assistentes automáticos e fluxos personalizados.
+                    Meu foco é entregar projetos rápidos, modernos e totalmente adaptados às necessidades de cada
+                    cliente.
+                </p>
                 </p>
             </div>
         </div>
@@ -222,8 +226,7 @@
                 </div>
                 <div class="faq-answer">
                     Você pode entrar em contato pelo nosso formulário no site ou via WhatsApp para solicitar um
-                    orçamento gratuito ou 👉 <a
-                        href="contato.html">Clique
+                    orçamento gratuito ou 👉 <a href="contato.html">Clique
                         aqui </a>
                 </div>
             </div>
@@ -436,6 +439,44 @@
         </div>
     </section>
 
+    <!--FORMULARIO PARA CONTATO + MODAL-->
+    <section class="form-section">
+        <h2>Entre em Contato</h2>
+        <p>Preencha o formulário e entrarei em contato dentro de <span style="color: #086cef; font-weight: 700;" >3 horas úteis</span></p>
+
+
+        <form action="https://formsubmit.co/SEUEMAILAQUI" method="POST" class="client-form">
+
+
+            <input type="text" name="nome" placeholder="Seu nome" required>
+
+
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+
+
+            <input type="text" name="telefone" placeholder="WhatsApp para contato" required>
+
+
+            <select name="servico" required>
+                <option value="" disabled selected>Selecione o serviço desejado</option>
+                <option value="Landing Page">Landing Page</option>
+                <option value="Site Completo">Site Completo</option>
+                <option value="Sistema Personalizado">Sistema Personalizado</option>
+            </select>
+
+
+            <textarea name="mensagem" rows="4" placeholder="Descreva brevemente sua necessidade"></textarea>
+
+
+            <input type="hidden" name="_subject" value="Novo cliente interessado!">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="box">
+
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
 
     <!--ondas efeito visual-->
     <div class="mov">
@@ -480,7 +521,7 @@
     </footer>
 
     <div class="rdp">
-        <p> © 2025 Copyright by <span style="font-weight: bold; color: #086cef;">Davi Ladwig dev</span> - <br>J Todos os
+        <p> © 2025 Copyright by <span style="font-weight: bold; color: #086cef;">Davi Ladwig dev</span> - <br> Todos os
             direitos reservados</p>
     </div>
 

@@ -81,35 +81,8 @@ cards.forEach(card => {
 });
 
 
-//SUBMMIT + MODAL
+// FORMULARIO + MODAL
 
-const form = document.getElementById("contactForm");
-const modal = document.getElementById("successModal");
-
-form.addEventListener("submit", async function (e) {
-  e.preventDefault();
-
-  const formData = new FormData(form);
-
-  try {
-    const response = await fetch("https://formsubmit.co/daviladwigdev@gmail.com", {
-      method: "POST",
-      body: formData
-    });
-
-    if (response.ok) {
-      modal.style.display = "flex";
-      form.reset();
-    } else {
-      alert("Ocorreu um erro ao enviar. Tente novamente.");
-    }
-
-  } catch (error) {
-    alert("Erro de conexão. Tente novamente.");
-  }
-});
-
-//ANIMAÇÃO AVALIAÇÕES
 
 
 
