@@ -219,3 +219,11 @@
         transform: scale(1);
     }
 }
+
+
+@media(max-width: 768px){
+    .plans-container{
+        display: flex;
+        flex-direction: column;
+    }
+}
