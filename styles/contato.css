@@ -79,3 +79,16 @@
 .client-form button:hover {
     opacity: 0.85;
 }
+
+@media(max-width: 1060px){
+    .contato-principal{
+        flex-direction: column;
+        align-items: center;
+        gap: 70px;
+    }
+
+    .intro-contato{
+        width: 80%;
+        padding: 0;
+    }
+}
