@@ -2,7 +2,7 @@
 .results-section {
     width: 100%;
     padding: 80px 0;
-    background: linear-gradient(120deg, #0b1020, #086cef);
+    background: linear-gradient(120deg, #080e12, #086cef);
     background-size: 300% 300%;
     animation: gradientMove 10s ease infinite;
     color: white;

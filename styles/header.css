@@ -4,15 +4,11 @@
    justify-content: space-between;
    align-items: center;
    padding: 10px 10px 5px;
-   background: #0b1020;
+   background: #080e12;
    position: relative;
    top: 0;
    left: 0;
    z-index: 2000;
-   /*efeito*/
-   position: relative;
-   background: radial-gradient(circle at center, #0b1020, #000);
-   overflow: hidden;
  }
 
  nav {
