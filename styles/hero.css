@@ -1,0 +1,172 @@
+.hero {
+  backdrop-filter: blur(2px);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: transparent;
+}
+
+/* CONTAINER */
+.hero-container {
+
+  max-width: 1400px;
+
+  margin-left: 8%;
+  margin-right: auto;
+
+  padding: 0 40px;
+
+  width: 100%;
+}
+
+/* CONTENT */
+.hero-content {
+
+  max-width: 750px;
+
+  animation: fadeUp 1s ease forwards;
+}
+
+/* LABEL */
+.hero-label {
+
+  color: #888;
+  letter-spacing: 3px;
+  font-size: 13px;
+
+  margin-bottom: 20px;
+}
+
+/* TITLE */
+.hero-title {
+
+  font-size: 64px;
+  line-height: 1.05;
+  font-weight: 600;
+
+  margin-bottom: 24px;
+
+  color: white;
+}
+
+.hero-title span {
+
+  color: #3b82f6;
+}
+
+/* DESCRIPTION */
+.hero-description {
+
+  font-size: 18px;
+  color: #9a9a9a;
+
+  line-height: 1.6;
+
+  margin-bottom: 32px;
+}
+
+/* BUTTONS */
+.hero-buttons {
+
+  display: flex;
+  gap: 16px;
+}
+
+/* PRIMARY BUTTON */
+.btn-primary {
+
+  background: #3b82f6;
+  color: white;
+
+  padding: 16px 28px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-weight: 500;
+
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 55, 255, 0.3);
+}
+
+/* SECONDARY BUTTON */
+.btn-secondary {
+
+  border: 1px solid #333;
+  color: white;
+
+  padding: 16px 28px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+
+  from {
+
+    opacity: 0;
+    transform: translateY(40px);
+
+  }
+
+  to {
+
+    opacity: 1;
+    transform: translateY(0);
+
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .hero-container {
+
+    margin-left: 0;
+    padding: 0 24px;
+  }
+
+  .hero-title {
+
+    font-size: 42px;
+  }
+
+  .hero-description {
+
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+

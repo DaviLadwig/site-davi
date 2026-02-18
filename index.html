@@ -4,220 +4,444 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Davi Ladwig</title>
-    <link rel="icon" href="images/davi-logo.png">
-    <link rel="stylesheet" href="style.css ">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Flow Devs</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/lucide-static/font/lucide.css" rel="stylesheet">
+
 
 </head>
 
 <body>
+    <canvas id="neuralCanvas"></canvas>
 
-    <!--INICIO HEADER-->
 
-    <header class="cabecalho-principal">
-        <div class="logo">
-            <img src="images/davi-logo__1_-removebg-preview.png" alt="logo">
+    <header class="header">
+
+        <div class="header-container">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="img/logo.png" alt="Code Company">
+            </div>
+
+            <!-- Menu Desktop -->
+            <nav class="nav-desktop">
+                <a href="index.html">Início</a>
+                <a href="#servicesme">Serviços</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="#contactForm">Contato</a>
+            </nav>
+
+            <!-- CTA Desktop -->
+            <a href="#contactForm" class="cta-btn">Começar projeto</a>
+
+            <!-- Hamburger -->
+            <div class="menu-toggle" id="menuToggle">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
         </div>
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#servico">Serviços</a>
-            <a href="projetos.html">Projetos</a>
-            <a href="#contato">Contato</a>
 
-        </nav>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
     </header>
 
-    <div id="overlay" class="overlay"></div>
 
+    <!-- Menu Mobile -->
+    <nav class="nav-mobile" id="navMobile">
 
-    <!--INICIO SOBRE-->
+        <a href="#">Início</a>
+        <a href="#servicesme">Serviços</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="#contactForm">Contato</a>
+
+        <a href="#contactForm" class="cta-mobile">Começar projeto</a>
+
+    </nav>
+
+    <!--HERO SECTION-->
     <section class="hero">
-        <!-- Partículas -->
-        <canvas id="particles"></canvas>
 
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>
-                    Desenvolvendo soluções tecnológicas<br />
-                    que impulsionam o crescimento e a eficiência dos negócios.
+        <div class="hero-container">
+
+            <div class="hero-content">
+
+                <div class="hero-label animate animate-left">
+                    DAVI LADWIG®
+                </div>
+
+                <h1 class="hero-title animate animate-left">
+                    Websites e sistemas<br>
+                    com padrão de<br>
+                    <span>alto nível.</span>
                 </h1>
 
+                <p class="hero-description animate-scale">
+                    Projetamos e desenvolvemos soluções digitais sob medida
+                    para empresas que buscam performance, autoridade e crescimento.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#" class="btn-primary">
+                        Solicitar orçamento
+                    </a>
+
+                    <a href="#" class="btn-secondary">
+                        Ver projetos
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!--SECTION SOBRE-->
+    <section class="about" id="aboutme">
+        <div class="about-overlay"></div>
+
+        <div class="about-content reveal reveal-left">
+            <span class="about-badge">SOBRE</span>
+
+            <h2 class="reveal reveal-left">
+                Tecnologia que impulsiona <span>negócios reais</span>
+            </h2>
+
+            <p><br>
+                DAVI LADWIG é um programador especializada no desenvolvimento de websites,
+                landing pages e sistemas personalizados. Nosso foco é criar soluções
+                modernas, rápidas e eficientes que ajudam empresas a crescer e se destacar
+                no digital.
+            </p>
+
+            <p>
+                Eu e minha equipe trabalhamos como parceiros estratégicos dos nossos clientes, entendendo
+                suas necessidades e transformando ideias em sistemas funcionais, com
+                design profissional e tecnologia de ponta.
+            </p>
+
+            <div class="about-stats">
+                <div class="stat">
+                    <h3>100%</h3>
+                    <span>Projetos personalizados</span>
+                </div>
+
+                <div class="stat">
+                    <h3>Alta</h3>
+                    <span>Performance</span>
+                </div>
+
+                <div class="stat">
+                    <h3>Total</h3>
+                    <span>Suporte e parceria</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--SECTION RESULTADOS-->
+    <section class="results">
+        <div class="results-wrapper ">
+
+            <!-- imagem lado esquerdo -->
+            <div class="results-image reveal reveal-scale">
+
+                <img src="img/website-landing-page-template_12582-277.jpeg" alt="Resultados e crescimento">
+
+            </div>
+
+            <!-- conteúdo lado direito -->
+            <div class="results-container reveal reveal-scale.show">
+
+                <span class="results-badge">RESULTADOS REAIS</span>
+
+                <h2>
+                    Aumente vendas em até <span>30%</span>
+                </h2>
+
+                <p class="results-description">
+                    Um website profissional não é apenas presença digital, é uma ferramenta
+                    estratégica de vendas. Com design moderno, carregamento rápido e foco
+                    em conversão, seu negócio passa a atrair mais clientes e gerar mais
+                    resultados.
+                </p>
+
+                <div class="results-list">
+
+                    <div class="result-item">
+                        <div class="result-dot"></div>
+                        <p>Mais credibilidade e confiança para sua marca</p>
+                    </div>
+
+                    <div class="result-item">
+                        <div class="result-dot"></div>
+                        <p>Maior taxa de conversão de visitantes em clientes</p>
+                    </div>
+
+                    <div class="result-item">
+                        <div class="result-dot"></div>
+                        <p>Disponível 24h por dia captando oportunidades</p>
+                    </div>
+
+                    <div class="result-item">
+                        <div class="result-dot"></div>
+                        <p>Estrutura pronta para escalar seu negócio</p>
+                    </div>
+
+                </div>
+
+                <a href="#" class="results-button">
+                    Solicitar meu website
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!--SECTION SERVIÇOS-->
+
+    <section class="services" id="servicesme">
+        <div class="services-container reveal reveal-right">
+
+            <div class="services-header">
+
+                <span class="">NOSSOS SERVIÇOS</span>
+
+                <h2>Soluções completas para<br>seu negócio crescer</h2>
+
                 <p>
-                    Criamos sistemas, sites e automações inteligentes para empresas
-                    que querem crescer com tecnologia.
+                    Criamos websites, landing pages e sistemas modernos focados em performance,
+                    conversão e crescimento do seu negócio.
                 </p>
 
-                <a href="#contato" class="btn-primary">Solicitar orçamento</a>
             </div>
 
-            <div class="hero-image">
-                <img src="images/img-1.png" alt="Tecnologia" />
+            <div class="services-grid">
+
+                <!-- Sites -->
+                <div class="service-card">
+
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <rect x="3" y="4" width="18" height="12" rx="2" />
+                        <line x1="8" y1="20" x2="16" y2="20" />
+                        <line x1="12" y1="16" x2="12" y2="20" />
+                    </svg>
+
+                    <h3>Sites Sob Medida</h3>
+
+                    <p>
+                        Websites modernos e profissionais que transmitem confiança
+                        e geram resultados reais.
+                    </p>
+
+                </div>
+
+                <!-- Manutenção -->
+                <div class="service-card">
+
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="3" />
+                        <path d="M19.4 15a7.97 7.97 0 0 0 .1-6" />
+                        <path d="M4.6 9a7.97 7.97 0 0 0-.1 6" />
+                    </svg>
+
+                    <h3>Personalização e Manutenção</h3>
+
+                    <p>
+                        Seu sistema sempre atualizado, seguro e funcionando perfeitamente.
+                    </p>
+
+                </div>
+
+                <!-- UI UX -->
+                <div class="service-card">
+
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M12 20h9" />
+                        <path d="M12 4h9" />
+                        <path d="M4 9h16" />
+                        <path d="M4 15h16" />
+                    </svg>
+
+                    <h3>UI e UX Design</h3>
+
+                    <p>
+                        Interfaces modernas e intuitivas que aumentam a conversão.
+                    </p>
+
+                </div>
+
+                <!-- SEO -->
+                <div class="service-card">
+
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+
+                    <h3>Estratégia SEO</h3>
+
+                    <p>
+                        Mais visibilidade no Google e mais clientes para seu negócio.
+                    </p>
+
+                </div>
+
+                <!-- Suporte -->
+                <div class="service-card">
+
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M18 8a6 6 0 0 0-12 0" />
+                        <path d="M6 18v-2" />
+                        <path d="M18 18v-2" />
+                    </svg>
+
+                    <h3>Suporte Técnico</h3>
+
+                    <p>
+                        Suporte completo e rápido sempre que você precisar.
+                    </p>
+
+                </div>
+
+                <!-- Landing Pages -->
+                <div class="service-card">
+
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                        <path d="M3 9h18" />
+                    </svg>
+
+                    <h3>Landing Pages</h3>
+
+                    <p>
+                        Páginas criadas estrategicamente para gerar mais vendas.
+                    </p>
+
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!--MINHA MISSÃO-->
-    <div class="missao">
-        <h1 class="reveal-right">O que eu faço e quais serviços eu presto</h1>
-        <div class="missao_principal">
-            <div>
-                <img src="images/missao-dev.jpeg" alt="img_ilustrate" class="reveal-up">
+    <!--INFORMAÇÃO EXTRA - PLANS-->
+    <section class="plans">
+        <div class="plans-container">
+
+            <div class="plans-header">
+
+                <span class="reveal reveal-left">SERVIÇOS PRINCIPAIS</span>
+
+                <h2 class="reveal reveal-scale">Soluções ideais para cada<br>fase do seu negócio</h2>
+
             </div>
 
-            <div class="missao_txt reveal-left">
-                <p> Eu desenvolvo <strong>sites profissionais</strong>, <strong>landing pages otimizadas</strong> e
-                    <strong>sistemas personalizados</strong> feitos sob medida para empresas e profissionais que
-                    precisam
-                    de tecnologia para crescer. Também trabalho com <strong>automação inteligente</strong> incluindo
-                    integrações
-                    com WhatsApp, assistentes automáticos e fluxos personalizados.
-                    Meu foco é entregar projetos rápidos, modernos e totalmente adaptados às necessidades de cada
-                    cliente.
-                </p>
-                </p>
+            <div class="plans-grid">
+
+                <!-- Landing Page -->
+                <div class="plan-card">
+
+                    <h3>Landing Page</h3>
+
+                    <p class="plan-desc">
+                        Ideal para empresas que desejam presença digital rápida e gerar clientes.
+                    </p>
+
+                    <ul>
+
+                        <li>Criação de página profissional</li>
+                        <li>Layout 100% responsivo</li>
+                        <li>Alta performance</li>
+                        <li>Formulário de contato</li>
+                        <li>Integração com WhatsApp</li>
+                        <li>SEO inicial configurado</li>
+
+                    </ul>
+
+                    <div class="plan-time">
+                        Prazo: 2 dias úteis
+                    </div>
+
+                </div>
+
+                <!-- Site Profissional -->
+                <div class="plan-card featured">
+
+                    <div class="badge">MAIS ESCOLHIDO</div>
+
+                    <h3>Site Profissional</h3>
+
+                    <p class="plan-desc">
+                        Solução completa para empresas que desejam autoridade e presença digital forte.
+                    </p>
+
+                    <ul>
+
+                        <li>Até 5 páginas</li>
+                        <li>Design personalizado</li>
+                        <li>SEO completo</li>
+                        <li>Integração com Analytics</li>
+                        <li>Formulários avançados</li>
+                        <li>Alta velocidade e segurança</li>
+
+                    </ul>
+
+                    <div class="plan-time">
+                        Prazo: 3 a 5 dias úteis
+                    </div>
+
+                </div>
+
+                <!-- Sistema -->
+                <div class="plan-card">
+
+                    <h3>Sistema Personalizado</h3>
+
+                    <p class="plan-desc">
+                        Sistemas sob medida para automatizar e escalar seu negócio.
+                    </p>
+
+                    <ul>
+
+                        <li>Sistema de login</li>
+                        <li>Painel administrativo</li>
+                        <li>Banco de dados integrado</li>
+                        <li>Integrações com APIs</li>
+                        <li>Interface moderna</li>
+                        <li>Alta escalabilidade</li>
+
+                    </ul>
+
+                    <div class="plan-time">
+                        Prazo: 15 dias úteis
+                    </div>
+
+                </div>
+
             </div>
-        </div>
-    </div>
-
-    <!--DIV FAIXA-->
-    <div class="faixa">
-        <div>
-            <span class="reveal-right">Adaptabilidade que gera soluções, tecnologia que move o seu futuro!</span>
-        </div>
-    </div>
-
-    <!--SOBRE MIM-->
-    <div id="sobre">
-        <h1 class="reveal-left">Conheça um pouco mais sobre mim
-        </h1>
-        <div class="Sobre-li">
-
-        </div>
-        <!--div texto sobre mim-->
-        <div class="sobre_principal">
-            <div class="sobre_txt">
-                <p class="reveal-right">
-                    Bem, como já visto acima, me chamo <span style="color: #086cef; font-weight: bold;">Davi
-                        Ladwig</span>. Sou desenvolvedor web,
-                    estou sempre buscando novas oportunidades no mercado de mostrar meus serviços
-                    no mercado da tecnologia. Prezo sempre por <span
-                        style="color:   #086cef; font-weight: bold;">credibilidade, presença e qualidade</span>.
-                    Você deseja ter um sistema de que vai otimizar e até mesmo inovar a cara do seu negócio?
-                </p>
-            </div>
-
-            <!--div imagem sobre mim-->
-            <div class="sobre-imagem">
-                <img src="images/dav.jpg" alt="img davi ladwig" class="reveal-fade">
-            </div>
-
-        </div>
-    </div>
-
-    <!--stacks-->
-    <div class="logos">
-        <div class="logos-slide reveal-fade">
-            <img src="images/html.png" />
-            <img src="images/css-3.png" />
-            <img src="images/script-java.png" />
-            <img src="images/biblioteca.png" />
-            <img src="images/11120644_fi_brands_mysql_icon.png" />
-            <img src="images/4691347_php_icon.png" />
-            <img src="images/8546793_laravel_icon.png" />
-            <img src="images/9041208_git_icon.png" />
-            <img src="images/8666135_bootstrap_icon.png" />
-            <img src="images/7156619_figma_icon.png" />
-            <img src="images/logotipo-da-linguagem-python.png" />
-        </div>
-        <div class="logos-slide reveal-fade">
-            <img src="images/html.png" />
-            <img src="images/css-3.png" />
-            <img src="images/script-java.png" />
-            <img src="images/biblioteca.png" />
-            <img src="images/11120644_fi_brands_mysql_icon.png" />
-            <img src="images/4691347_php_icon.png" />
-            <img src="images/8546793_laravel_icon.png" />
-            <img src="images/9041208_git_icon.png" />
-            <img src="images/8666135_bootstrap_icon.png" />
-            <img src="images/7156619_figma_icon.png" />
-            <img src="images/logotipo-da-linguagem-python.png" />
-        </div>
-
-
-    </div>
-
-    <!--DIV CARDS DE SERVIÇO-->
-    <section class="servicos" id="servico">
-        <h2 class="titulo-servicos">Serviços</h2>
-
-        <div class="cards-container">
-
-            <div class="card">
-                <i class="ph ph-brain"></i>
-                <h3>Agente de IA</h3>
-                <p>Automatize seu atendimento com inteligência artificial humanizada para chatbots, agendamentos e
-                    relatórios.</p>
-            </div>
-
-            <div class="card">
-                <i class="ph ph-monitor"></i>
-                <h3>Sites Sob Medida</h3>
-                <p>Criação de websites modernos, personalizados e otimizados para entregar a melhor experiência digital.
-                </p>
-            </div>
-
-            <div class="card">
-                <i class="ph ph-gear"></i>
-                <h3>Personalização e Manutenção</h3>
-                <p>Serviços contínuos para garantir que seu site ou sistema esteja sempre atualizado.</p>
-            </div>
-
-            <div class="card">
-                <i class="ph ph-paint-brush"></i>
-                <h3>UI e UX Design</h3>
-                <p>Interfaces criativas e experiências intuitivas para encantar seus clientes.</p>
-            </div>
-
-            <div class="card">
-                <i class="ph ph-magnifying-glass"></i>
-                <h3>Estratégia SEO</h3>
-                <p>Motor de busca otimizado para melhorar sua presença online e atrair mais clientes.</p>
-            </div>
-
-            <div class="card">
-                <i class="ph ph-headset"></i>
-                <h3>Suporte Técnico</h3>
-                <p>Suporte completo para manter seus sistemas funcionando perfeitamente.</p>
-            </div>
-
         </div>
     </section>
 
+    <!--FAQ-->
+    <section class="faq-section">
+        <div class="faq-container">
 
-
-
-
-
-    <!--DUVIDAS FREQUENTES-->
-    <div id="faq">
-        <div class="faq-container reveal-fade">
-            <div class="faq-txt">
-                <h2 class="reveal-left">Perguntas Frequentes</h2>
-            </div>
-
+            <h2 class="faq-title">Perguntas Frequentes</h2>
 
             <div class="faq-item">
-                <div class="faq-question">
-                    Quais serviços você oferece?
-                    <span>+</span>
-                </div>
+                <button class="faq-question">
+                    Quais serviços são oferecidos?
+                    <span class="faq-arrow"></span>
+                </button>
                 <div class="faq-answer">
                     Serviços de desenvolvimento web, sistemas personalizados e automações com inteligência
                     artificial.
@@ -225,341 +449,267 @@
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
+                <button class="faq-question">
                     Como posso solicitar um orçamento?
-                    <span>+</span>
-                </div>
+                    <span class="faq-arrow"></span>
+                </button>
                 <div class="faq-answer">
-                    Você pode entrar em contato pelo nosso formulário no site ou via WhatsApp para solicitar um
-                    orçamento gratuito ou 👉 <a href="#contato">Clique
-                        aqui </a>
+                    O interessado pode entrar em contato pelo formulário no site ou via WhatsApp para solicitar um
+                    orçamento
+                    gratuito.
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
-                    Você trabalha com manutenção de sites?
-                    <span>+</span>
-                </div>
+                <button class="faq-question">
+                    Vocês trabalham com manutenção de sites?
+                    <span class="faq-arrow"></span>
+                </button>
                 <div class="faq-answer">
-                    Sim, ofereço pacotes de manutenção e suporte para garantir que seu site esteja sempre atualizado
+                    Sim, oferecemos pacotes de manutenção e suporte para garantir que seu site esteja sempre atualizado
                     e
                     seguro.
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
+                <button class="faq-question">
                     Em quanto tempo um site fica pronto?
-                    <span>+</span>
-                </div>
+                    <span class="faq-arrow"></span>
+                </button>
                 <div class="faq-answer">
-                    O prazo varia conforme o projeto, mas geralmente entre 1 a 4 semanas, dependendo da complexidade
-                    do
-                    projeto e demanda de serviço.
+                    O prazo varia entre 1 a 4 semanas, dependendo da complexidade do projeto.
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
+                <button class="faq-question">
                     Posso pedir um sistema sob medida?
-                    <span>+</span>
-                </div>
+                    <span class="faq-arrow"></span>
+                </button>
                 <div class="faq-answer">
-                    Claro! Desenvolvo sistemas totalmente personalizados de acordo com a necessidade do cliente.
+                    Claro! Desenvolvo sistemas totalmente personalizados conforme sua necessidade.
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
-                    Você atende todo o Brasil?
-                    <span>+</span>
-                </div>
+                <button class="faq-question">
+                    Atende todo o Brasil?
+                    <span class="faq-arrow"></span>
+                </button>
                 <div class="faq-answer">
-                    Sim, atendo clientes de todo o Brasil de forma 100% online.
+                    Sim, atendemos clientes de todo o Brasil de forma 100% online.
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!--BAIXAR buttons-->
-    <div class="buttons-link">
-        <a href="projetos.html" class="btn-end btn-1 reveal-left">Veja meus Projetos</a>
-        <a href="#contato" class="btn-end btn-2 reveal-right">Entre em contato</a>
-    </div>
-
-    <!--MAIS INFROMAÇÕES-->
-    <section class="plans">
-        <h2 class="title reveal-right">Mais informações</h2>
-
-
-        <div class="plans-container">
-
-            <!-- Plano Starter -->
-            <div class="card">
-                <h3>Landing Page</h3>
-                <p class="desc">Ideal para quem busca presença digital rápida e eficiente.</p>
-
-                <ul>
-                    <li><span style="color: #086cef;">✓</span> Criação de landing page institucional </li>
-                    <li><span style="color: #086cef;">✓</span> Layout responsivo</li>
-                    <li><span style="color: #086cef;">✓</span> 1 página (Landing Page)</li>
-                    <li><span style="color: #086cef;">✓</span> Formulário de contato</li>
-                    <li><span style="color: #086cef;">✓</span> Integração com WhatsApp</li>
-                    <li><span style="color: #086cef;">✓</span> Otimização inicial de SEO</li>
-                    <li><span style="color: #086cef;">✓</span> Integração simples de IA</li>
-                </ul>
-
-                <div class="prazo">⏱️ Prazo: 3 a 5 dias úteis</div>
-
-                <a href="#contato" class="btn">Entrar em cotato</a>
-
-            </div>
-
-            <!-- Plano Professional -->
-            <div class="card featured">
-                <h3>Site Profissional</h3>
-                <p class="desc">Para empresas que querem um site completo e profissional.</p>
-
-                <ul>
-                    <li><span style="color: #086cef;">✓</span> Site com até 5 páginas</li>
-                    <li><span style="color: #086cef;">✓</span> Design personalizado</li>
-                    <li><span style="color: #086cef;">✓</span> SEO Completo</li>
-                    <li><span style="color: #086cef;">✓</span> Google Analytics</li>
-                    <li><span style="color: #086cef;">✓</span> Blog estruturado</li>
-                    <li><span style="color: #086cef;">✓</span> Formulários avançados</li>
-                    <li><span style="color: #086cef;">✓</span> Certificado SSL</li>
-                </ul>
-
-                <div class="prazo">⏱️ Prazo: 7 a 12 dias úteis</div>
-
-                <a href="#contato" class="btn">Entrar em contato</a>
-
-            </div>
-
-            <!-- Plano Enterprise -->
-            <div class="card">
-                <h3>Sistema Personalizado</h3>
-                <p class="desc">Para empresas que desejam automações e integração com sistemas.</p>
-
-                <ul>
-                    <li><span style="color: #086cef;">✓</span> Até 10 páginas</li>
-                    <li><span style="color: #086cef;">✓</span> Design premium + UI/UX avançado</li>
-                    <li><span style="color: #086cef;">✓</span> Sistema de login</li>
-                    <li><span style="color: #086cef;">✓</span> Painel administrativo</li>
-                    <li><span style="color: #086cef;">✓</span> Integrações externas (CRM, ERP, API)</li>
-                    <li><span style="color: #086cef;">✓</span> SEO avançado</li>
-                    <li><span style="color: #086cef;">✓</span> Suporte prioritário</li>
-                </ul>
-
-                <div class="prazo">⏱️ Prazo: 15 a 25 dias úteis</div>
-
-                <a href="#contato" class="btn">Entrar em contato</a>
-
             </div>
 
         </div>
     </section>
 
-    <!--CARDS ESTATCS-->
-    <section class="results-section">
+    <!--PROCESSOS-->
+    <section class="process">
+        <div class="process-container animate animate-scale"">
 
-        <div class="results-container">
+            <div class=" process-header reveal reveal-left">
+            <span>PROCESSO</span>
+            <h2>Como eu posso transformar sua ideia em realidade</h2>
+            <p>Um processo estruturado para entregar qualidade, velocidade e resultado.</p>
+        </div>
 
-            <div class="result-item reveal-up">
-                <h2>+ de 11</h2>
-                <p class="result-title">Sites Desenvolvidos</p>
-                <span class="result-desc">
-                    Soluções web exclusivas, planejadas com foco em performance, conversão e experiência do usuário.
-                </span>
+        <div class="process-steps reveal reveal-scale">
+
+            <div class="process-step">
+                <div class="step-circle">1</div>
+                <h3>Análise</h3>
+                <p>Entendemos seu negócio e objetivos.</p>
             </div>
 
-            <div class="result-item reveal-up">
-                <h2>+ de 4</h2>
-                <p class="result-title">Sistemas Criados</p>
-                <span class="result-desc">
-                    Sistemas sob medida, cada um construído para resolver desafios únicos e otimizar processos internos.
-                </span>
+            <div class="process-step">
+                <div class="step-circle">2</div>
+                <h3>Planejamento</h3>
+                <p>Criamos a melhor solução estratégica.</p>
             </div>
 
-            <div class="result-item reveal-up">
-                <h2>+ de 10</h2>
-                <p class="result-title">Clientes Satisfeitos</p>
-                <span class="result-desc">
-                    Relacionamentos duradouros e entregas que realmente transformam a presença digital de cada cliente.
-                </span>
+            <div class="process-step">
+                <div class="step-circle">3</div>
+                <h3>Design</h3>
+                <p>Desenvolvemos um layout moderno.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-circle">4</div>
+                <h3>Desenvolvimento</h3>
+                <p>Construímos com tecnologia avançada.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-circle">5</div>
+                <h3>Entrega</h3>
+                <p>Publicamos e damos suporte completo.</p>
             </div>
 
         </div>
-
-    </section>
-
-
-
-    <!--PROVA SOCIAL-->
-    <section class="reviews-section">
-        <h2>O que meus clientes dizem</h2>
-
-        <div class="reviews-list">
-
-            <div class="review-item reveal-left">
-                <div class="photo" style="background-image: url('images/adv1.png');"></div>
-                <h3>Dr. Marcos Almeida</h3>
-                <span class="role">Advogado Trabalhista</span>
-                <div class="stars">★★★★★</div>
-                <p>O Davi entregou meu site jurídico com profissionalismo e rapidez.</p>
-            </div>
-
-            <div class="review-item reveal-left">
-                <div class="photo" style="background-image: url('images/adv-ela1.png');"></div>
-                <h3>Dra. Patrícia Souza</h3>
-                <span class="role">Advogada Cível</span>
-                <div class="stars">★★★★☆</div>
-                <p>Site moderno, limpo e que transmite confiança aos clientes.</p>
-            </div>
-
-            <div class="review-item reveal-left">
-                <div class="photo" style="background-image: url('images/dents.png');"></div>
-                <h3>Dr. Lucas Ferreira</h3>
-                <span class="role">Dentista</span>
-                <div class="stars">★★★★★</div>
-                <p>Meu consultório ganhou mais agendamentos após o novo site.</p>
-            </div>
-
-            <div class="review-item reveal-left">
-                <div class="photo" style="background-image: url('images/nut1.png');"></div>
-                <h3>Ana Beatriz Ramos</h3>
-                <span class="role">Nutricionista</span>
-                <div class="stars">★★★★★</div>
-                <p>Layout perfeito para meu branding, muito profissional.</p>
-            </div>
-
-            <div class="review-item reveal-left">
-                <div class="photo" style="background-image: url('images/psico.png');"></div>
-                <h3>Dr. Henrique Melo</h3>
-                <span class="role">Psicólogo</span>
-                <div class="stars">★★★★☆</div>
-                <p>Site acolhedor e com ótimo desempenho. Amei o resultado!</p>
-            </div>
 
         </div>
     </section>
 
+    <!--FORMULAERIO-->
 
+    <section class="cta-premium">
 
-    <!--FORMULARIO PARA CONTATO + MODAL-->
-    <div id="contato" class="contato-principal">
+        <div class="mesh-bg"></div>
 
-        <div class="intro-contato">
-            <h2>Vamos fazer um projeto juntos!</h2>
-            <p>Não deixe essa oportunidade de ter um site ou sistema totalmente personalizados.
-                Estou aqui para ajudar você a criar soluções digitais que impulsionam o crescimento do seu negócio.
-                Entre em contato para discutirmos suas necessidades e como podemos alcançar seus objetivos juntos.</p>
-        </div>
+        <div class="cta-wrapper">
 
-        <section class="form-section">
-            <h2>Entre em Contato</h2>
-            <p>Preencha o formulário e entrarei em contato dentro de <span style="color: #086cef; font-weight: 700;">3
-                    horas
-                    úteis</span></p>
+            <div class="cta-left reveal reveal-left">
 
+                <span class="cta-badge">
+                    INICIE SEU PROJETO
+                </span>
 
-            <form action="https://formsubmit.co/daviladwigdev@gmail.com" method="POST" class="client-form">
+                <h2>
+                    Vamos transformar sua presença digital em uma máquina de vendas
+                </h2>
 
+                <p>
+                    Cada projeto é desenvolvido com estratégia, design premium e foco em conversão.
+                    Seu site não será apenas bonito — será uma ferramenta de crescimento.
+                </p>
 
-                <input type="text" name="nome" placeholder="Seu nome" required>
+                <div class="cta-benefits">
 
-
-                <input type="email" name="email" placeholder="Seu e-mail" required>
-
-
-                <input type="text" name="telefone" placeholder="WhatsApp para contato" required>
-
-
-                <select name="servico" required>
-                    <option value="" disabled selected>Selecione o serviço desejado</option>
-                    <option value="Landing Page">Landing Page</option>
-                    <option value="Site Completo">Site Completo</option>
-                    <option value="Sistema Personalizado">Sistema Personalizado</option>
-                </select>
-
-
-                <textarea name="mensagem" rows="4" placeholder="Descreva brevemente sua necessidade"></textarea>
-
-
-                <input type="hidden" name="_subject" value="Novo cliente interessado!">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="box">
-
-
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-
-    </div>
-
-
-    <!--ondas efeito visual-->
-    <div class="mov">
-        <div class="wave wave1"></div>
-        <div class="wave wave2"></div>
-        <div class="wave wave3"></div>
-        <div class="wave wave4"></div>
-    </div>
-
-    <!--RODAPE -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>faça um projeto</h4>
-                    <ul>
-                        <li><a href="contato.html" target="_blank">Clique Aqui</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Suporte e duvidas</h4>
-                    <ul>
-                        <li><a
-                                href="https://wa.me/5598991713898?text=Ol%C3%A1%20Davi,%20gostaria%20de%20agendar%20uma%20consultoria%20gratuita%20para%20falarmos%20sobre%20meu%20projeto.">WhatsApp</a>
-                        </li>
-                        <li><a href="daviladwigdev@gmail.com" target="_blank">E-mail</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Redes Sociais</h4>
-                    <div class="social-links">
-                        <a href="https://github.com/DaviLadwig" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.instagram.com/ladwigdavi?igsh=MW5tbGxzMWd0Znh4Ng%3D%3D&utm_source=qr"><i
-                                class="fab fa-instagram"></i></a>
-                        <a
-                            href="https://www.linkedin.com/in/davi-ladwig-9569291b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i
-                                class="fab fa-linkedin-in" target="_blank"></i></a>
+                    <div class="benefit">
+                        ⚡ Atendimento rápido
                     </div>
+
+                    <div class="benefit">
+                        🚀 Entrega profissional
+                    </div>
+
+                    <div class="benefit">
+                        🎯 Foco em conversão
+                    </div>
+
                 </div>
+
             </div>
+
+            <form action="https://formsubmit.co/ajax/daviladwigdev@gmail.com" method="POST" class="cta-form-premium"
+                id="contactForm">
+
+                <div class="input-box">
+                    <input type="text" name="name" required>
+                    <label>Seu nome</label>
+                    <span class="line"></span>
+                </div>
+
+                <div class="input-box">
+                    <input type="email" name="email" required>
+                    <label>Seu email</label>
+                    <span class="line"></span>
+                </div>
+
+                <div class="input-box">
+                    <input type="tel" name="phone" required>
+                    <label>Seu WhatsApp</label>
+                    <span class="line"></span>
+                </div>
+
+                <div class="input-box">
+                    <textarea name="message" required></textarea>
+                    <label>Conte sobre seu projeto</label>
+                    <span class="line"></span>
+                </div>
+
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+
+                <button type="submit" class="btn-premium" id="submitBtn">
+                    <span class="btn-text">INICIAR PROJETO</span>
+                    <span class="btn-loading"></span>
+                </button>
+
+                <div class="form-success" id="formSuccess">
+                    ✓ Mensagem enviada com sucesso.
+                </div>
+
+            </form>
+
         </div>
+    </section>
+
+    <!--FOOTER-->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- Coluna 1 - Marca -->
+            <div class="footer-brand">
+
+                <img src="img/logo.png" class="footer-logo">
+
+                <p>
+                    Desenvolvemos sites e sistemas modernos com foco em resultados reais,
+                    ajudando empresas a crescer e vender mais no digital.
+                </p>
+
+            </div>
+
+            <!-- Coluna 2 - Serviços -->
+            <div class="footer-column">
+
+                <h4>Serviços</h4>
+
+                <a href="#">Criação de Sites</a>
+                <a href="#">Landing Pages</a>
+                <a href="#">Sistemas Web</a>
+                <a href="#">Sistemas de Agendamento</a>
+                <a href="#">Sistemas Delivery</a>
+
+            </div>
+
+            <!-- Coluna 3 - Empresa -->
+            <div class="footer-column">
+
+                <h4>Empresa</h4>
+
+                <a href="#aboutme">Sobre</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="#contactForm">Contato</a>
+
+            </div>
+
+            <!-- Coluna 4 - Contato -->
+            <div class="footer-column">
+
+                <h4>Contato e Social</h4>
+
+                <a href="#">daviladwigdev@gmail.com</a>
+                <a href="#">Instagram</a>
+
+            </div>
+
+        </div>
+
+        <!-- Linha inferior -->
+
+        <div class="footer-bottom">
+
+            <div class="footer-line"></div>
+
+            <p>
+                © 2026 DAVI LADWIG. Todos os direitos reservados.
+            </p>
+
+        </div>
+
     </footer>
 
-    <div class="rdp">
-        <p> © 2025 Copyright by <span style="font-weight: bold; color: #086cef;">Davi Ladwig dev</span> - <br> Todos os
-            direitos reservados</p>
-    </div>
-
-    <!--SCRIPT-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-    <!-- Link dos ícones -->
-    <script src="https://unpkg.com/phosphor-icons"></script>
-
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+
+
+
 </body>
 
 </html>
