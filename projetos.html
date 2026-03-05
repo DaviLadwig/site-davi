@@ -1,29 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Projetos</title>
-
-    <!-- CSS GLOBAL -->
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            background: #000;
-        }
-    </style>
-
+    <title>Projetos - Davi Ladwig</title>
+    <link rel="stylesheet" href="styles/projects.css">
 </head>
 
 <body>
 
-    <canvas id="neuralCanvas"></canvas>
+    <!-- Partículas globais -->
+    <div class="particles-bg">
+        <span class="particle"></span>
+        <span class="particle"></span>
+        <span class="particle"></span>
+        <span class="particle"></span>
+    </div>
 
-
-    <!-- HEADER (mesmo do index) -->
+    <!-- Header -->
 
     <header class="header">
 
@@ -36,10 +31,14 @@
 
             <!-- Menu Desktop -->
             <nav class="nav-desktop">
+                <a href="index.html">Início</a>
+                <a href="#servicesme">Serviços</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="#contactForm">Contato</a>
             </nav>
 
             <!-- CTA Desktop -->
-            <a href="index.html" class="cta-btn">Voltar para a página principal</a>
+            <a href="#contactForm" class="cta-btn">Começar projeto</a>
 
             <!-- Hamburger -->
             <div class="menu-toggle" id="menuToggle">
@@ -66,260 +65,186 @@
         <a href="#contactForm" class="cta-mobile">Começar projeto</a>
 
     </nav>
-    </header>
 
+    <section class="projects">
+
+        <div class="projects-header">
+            <h1>Projetos em Destaque</h1>
+            <p>Soluções digitais construídas com foco em performance e experiência.</p>
+        </div>
 
+        <!-- Projeto 1 -->
+        <div class="project-row">
 
-    <!-- CONTEÚDO -->
+            <div class="project-visual">
+                <video src="videos/advvideo.mp4" loop autoplay muted></video>
+            </div>
 
-    <section class="projects-section">
+            <div class="project-info">
+                <span class="tag">Website</span>
+                <h2>Site Advocacia</h2>
+                <p>
+                    Site institucional para o Dr. Leaonardo Lima, página com design bonito, moderno e confiante.
 
-        <div class="container">
+                </p>
 
-            <h1 class="projects-title reveal">
-                Nossos projetos são postados aqui
-            </h1>
+                <div class="tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <a href="https://adv-leonardolima.vercel.app/" class="btn">Ver Projeto</a>
+            </div>
+
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="project-row reverse">
 
-            <div class="projects-grid">
+            <div class="project-visual">
+                <video src="videos/arcvideo.mp4" loop autoplay muted></video>
+            </div>
 
+            <div class="project-info">
+                <span class="tag">Website</span>
+                <h2>ARC Construtora</h2>
+                <p>
+                    Site institucional desenvolvido para ARC construtora, adicionado de uma página mostrando
+                    seus case de sucesso.
+                </p>
 
-
-                <!-- PROJETO 1 -->
-
-                <a href="https://adv-leonardolima.vercel.app/" target="_blank" class="project-card reveal">
-
-                    <div class="project-image">
-
-                        <img src="img/mockup-adv.png">
-
-                    </div>
-
-                    <div class="project-overlay">
-
-                        <div class="project-content">
-
-                            <div class="project-tags">
-
-                                <span>UI E UX</span>
-                                <span>DEV</span>
-                                <span>WEBSITE</span>
-
-                            </div>
-
-                            <div class="project-bottom">
-
-                                <h3>Leonardo Lima ADV</h3>
-
-                                <div class="project-arrow">
-                                    ↗
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </a>
-
-
-
-                <!-- PROJETO 2 -->
-
-                <a href="https://arc-construtora.vercel.app/" target="_blank" class="project-card reveal">
-
-                    <div class="project-image">
-
-                        <img src="img/mockup-arc.png">
-
-                    </div>
-
-                    <div class="project-overlay">
-
-                        <div class="project-content">
-
-                            <div class="project-tags">
-
-                                <span>WEBSITE</span>
-                                <span>UI E UX</span>
-                                <span>DEV</span>
-
-                            </div>
-
-                            <div class="project-bottom">
-
-                                <h3>ARC Construtora</h3>
-
-                                <div class="project-arrow">
-                                    ↗
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </a>
-
-
-
-                <!-- PROJETO 3 -->
-
-                <a href="https://draisabelmeireles.vercel.app/" class="project-card reveal">
-
-                    <div class="project-image">
-
-                        <img src="img/mockup-dnt.png">
-
-                    </div>
-
-                    <div class="project-overlay">
-
-                        <div class="project-content">
-
-                            <div class="project-tags">
-
-                                <span>LANDING PAGE</span>
-                                <span>UI E EX</span>
-                                <span>FOCO CONVERSÃO</span>
-
-                            </div>
-
-                            <div class="project-bottom">
-
-                                <h3>Dra. Isabel Meireles</h3>
-
-                                <div class="project-arrow">
-                                    ↗
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </a>
-
-
-                 <a href="https://www.cotasimples.online/" class="project-card reveal">
-
-                    <div class="project-image">
-
-                        <img src="img/mockup-cota.png">
-
-                    </div>
-
-                    <div class="project-overlay">
-
-                        <div class="project-content">
-
-                            <div class="project-tags">
-
-                                <span>SISTEMA</span>
-                                <span>MODERNO</span>
-                                <span>HTML,CSS,JS</span>
-
-                            </div>
-
-                            <div class="project-bottom">
-
-                                <h3>Cota Simples</h3>
-
-                                <div class="project-arrow">
-                                    ↗
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </a>
-
-                 <a href="https://app-financeiro-peach.vercel.app/" class="project-card reveal">
-
-                    <div class="project-image">
-
-                        <img src="img/mockup-gst.png">
-
-                    </div>
-
-                    <div class="project-overlay">
-
-                        <div class="project-content">
-
-                            <div class="project-tags">
-
-                                <span>SISTEMA</span>
-                                <span>BOOTSRAP</span>
-                                <span>HTML,CSS,JS</span>
-
-                            </div>
-
-                            <div class="project-bottom">
-
-                                <h3>App controle financeiro</h3>
-
-                                <div class="project-arrow">
-                                    ↗
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </a>
-
-                 <a href="https://verdearena.vercel.app/" class="project-card reveal">
-
-                    <div class="project-image">
-
-                        <img src="img/mockup-vrd.png">
-
-                    </div>
-
-                    <div class="project-overlay">
-
-                        <div class="project-content">
-
-                            <div class="project-tags">
-
-                                <span>SISTEMA</span>
-                                <span>AGENDAMENTO</span>
-                                <span>PHP</span>
-
-                            </div>
-
-                            <div class="project-bottom">
-
-                                <h3>Verde Arena</h3>
-
-                                <div class="project-arrow">
-                                    ↗
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </a>
-
+                <div class="tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <a href="https://arc-construtora.vercel.app/" class="btn">Ver Projeto</a>
+            </div>
+
+        </div>
+
+        <div class="project-row">
+
+            <div class="project-visual">
+                <video src="videos/aureavideo.mp4" loop autoplay muted></video>
+            </div>
+
+            <div class="project-info">
+                <span class="tag">E-commerce</span>
+                <h2>Aurea Maison</h2>
+                <p>
+                    Loja online de joias de alto padrão, design impecável, fino e luxuoso.
+                </p>
+
+                <div class="tech">
+                    <span>Vite</span>
+                    <span>Tailwind</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <a href="https://aureamaison.vercel.app/" class="btn">Ver Projeto</a>
+            </div>
+
+        </div>
+
+        <div class="project-row reverse">
+
+            <div class="project-visual">
+                <video src="videos/odontovideo.mp4" loop autoplay muted></video>
+            </div>
+
+            <div class="project-info">
+                <span class="tag">Website</span>
+                <h2>Dra. Isabel Meireles</h2>
+                <p>
+                    Site institucional Dra. Isabel Meireles, site responsivo, bonito e focado para
+                    conversão e captação de clientes.
+                </p>
+
+                <div class="tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <a href="https://draisabelmeireles.vercel.app/" class="btn">Ver Projeto</a>
+            </div>
+
+        </div>
+
+        <div class="project-row">
+
+            <div class="project-visual">
+                <video src="videos/gastovideo.mp4" loop autoplay muted></video>
+            </div>
+
+            <div class="project-info">
+                <span class="tag">Sistema Web</span>
+                <h2>Sistema de Controle Financeiro</h2>
+                <p>
+                    Sistema desenvoolvido para controle de gastos, pessoais e profissionais. Rápido e fácil.
+                </p>
+
+                <div class="tech">
+                    <span>PHP</span>
+                    <span>Bootstrap</span>
+                    <span>MySQL</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <a href="https://app-financeiro-peach.vercel.app/" class="btn">Ver Projeto</a>
+            </div>
+
+        </div>
+
+        <div class="project-row reverse">
+
+            <div class="project-visual">
+                <video src="videos/cotavideo.mp4" loop autoplay muted></video>
+            </div>
+
+            <div class="project-info">
+                <span class="tag">Sistema Web</span>
+                <h2>Cota Simples</h2>
+                <p>
+                    Cota simples é um sistema web desenvolvido com foco em orçamentos rapido, direto e formal.
+                </p>
+
+                <div class="tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <a href="https://www.cotasimples.online/" class="btn">Ver Projeto</a>
             </div>
 
         </div>
 
     </section>
-    
 
+
+    <section class="cta-final">
+        <div class="cta-container">
+
+            <h2>Vamos criar algo incrível juntos</h2>
+
+            <p>
+                Se você precisa de um site, sistema ou automação com inteligência artificial,
+                entre em contato agora e vamos transformar sua ideia em realidade.
+            </p>
+
+            <a href="https://wa.me/5598981473574" target="_blank" class="cta-button">
+                Falar no WhatsApp
+            </a>
+
+        </div>
+    </section>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>

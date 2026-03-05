@@ -145,7 +145,7 @@ document.querySelectorAll('.faq-question').forEach(button => {
 
         const faqItem = button.parentElement
         const answer = faqItem.querySelector('.faq-answer')
-
+ 
         if (faqItem.classList.contains('active')) {
 
             answer.style.height = answer.scrollHeight + 'px'
