@@ -130,11 +130,15 @@
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .projects-section {
+    padding: 200px 15px;
+  }
 }
 
 @media (max-width: 768px) {
   .projects-section {
-    padding: 80px 16px;
+    padding: 200px 15px;
   }
 
   .projects-grid {
