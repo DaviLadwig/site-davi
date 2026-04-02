@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos - Davi Ladwig</title>
-    <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -38,7 +38,8 @@
             </nav>
 
             <!-- CTA Desktop -->
-            <a href="https://wa.me/5598981473574" class="cta-btn">Começar projeto</a>
+            <a href="https://wa.me/5598981473574?text=Ol%C3%A1%20Davi,%20eu%20gostaria%20de%20fazer%20um%20projeto%20com%20voc%C3%AA%F0%9F%98%83"
+                class="cta-btn" target="_blank">Começar projeto</a>
 
             <!-- Hamburger -->
             <div class="menu-toggle" id="menuToggle">
@@ -62,186 +63,260 @@
         <a href="projetos.html">Projetos</a>
         <a href="#contactForm">Contato</a>
 
-        <a href="https://wa.me/5598981473574" class="cta-mobile">Começar projeto</a>
+        <a href="https://wa.me/5598981473574?text=Ol%C3%A1%20Davi,%20eu%20gostaria%20de%20fazer%20um%20projeto%20com%20voc%C3%AA%F0%9F%98%83"
+            class="cta-mobile" target="_blank">Começar projeto</a>
 
     </nav>
 
-    <section class="projects">
-
-        <div class="projects-header">
-            <h1>Projetos em Destaque</h1>
-            <p>Soluções digitais construídas com foco em performance e experiência.</p>
-        </div>
-
-        <!-- Projeto 1 -->
-        <div class="project-row">
-
-            <div class="project-visual">
-                <video src="videos/advvideo.mp4" loop autoplay muted></video>
-            </div>
-
-            <div class="project-info">
-                <span class="tag">Website</span>
-                <h2>Site Advocacia</h2>
+    <section class="projects-section" id="projetos">
+        <div class="projects-container">
+            <div class="projects-header">
+                <span class="projects-tag">Portfólio</span>
+                <h2>Projetos em destaque</h2>
                 <p>
-                    Site institucional para o Dr. Leaonardo Lima, página com design bonito, moderno e confiante.
-
+                    Trabalhos desenvolvidos com foco em design moderno, performance e
+                    experiência do usuário para sites, landing pages e sistemas web.
                 </p>
-
-                <div class="tech">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-
-                <a href="https://adv-leonardolima.vercel.app/" class="btn">Ver Projeto</a>
             </div>
 
+            <div class="projects-grid">
+                <!-- Projeto 1 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="img/advleonardo.png" alt="Projeto 1">
+
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Adv. Leonardo Lima</h3>
+                        <p>
+                            Desenvolvido para mostrar os serviços oferecidos pelo Dr. Leonardo Lima. Conta com interface clássica e moderna.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Projeto 2 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="img/arc.png" alt="Projeto 2">
+
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Figma</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>ARC Construtora</h3>
+                        <p>
+                            Website da ARC mostra a historia da empresa, áreas de atuação de serviço, formulário para contato, design bonito
+                            e acompanha a estrutura da empresa.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Projeto 3 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="img/aureamaison.png" alt="Projeto 3">
+
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Typescript</span>
+                                <span>Tailwindcss</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Aurea Maison</h3>
+                        <p>
+                            Sistema de e-commerce de joias de alto padrão, o sistema conta com um design único, responsivo, luxuoso e
+                            com uma experiêcia de uso incrível.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="img/draisabel.png" alt="Projeto 3">
+
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Dra. Isabel Meireles</h3>
+                        <p>
+                            Site desenvolvido para mostrar os serviços prestados pela doutora Isabel Meireles. Design minimalista com cores neutras
+                            e delicadas.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="img/planotopo.png" alt="Projeto 3">
+
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Planotopo | Locações</h3>
+                        <p>
+                            Sistema web que contem área institucional e catalogo com carrinho imitando um marketplace para
+                            melhorar a experiência do usúario, esse modelo de sistema dá profissionalismo, autoridade e facilidade.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="img/controlegastos.png" alt="Projeto 3">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>JavaScript</span>
+                                <span>Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Controle de gastos</h3>
+                        <p>
+                            Sistema web gerado para ajudar o usuário a ter controle sobre aquilo que ele recebe e com o que gasta.
+                            (Interface em desenvolvimento para melhor experiência)
+                        </p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="img/cotasimples.png" alt="Projeto 3">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Cota Simples</h3>
+                        <p>
+                            Sistema de orçamentos profissionais online, rápido e fácil. O usuário preenche as informções e ao finalizar
+                            baixa um pdf, com a logo desejada e as informações preenchidas.   
+                        </p>
+                    </div>
+                </article>
+            </div>
         </div>
-
-        <!-- Projeto 2 -->
-        <div class="project-row reverse">
-
-            <div class="project-visual">
-                <video src="videos/arcvideo.mp4" loop autoplay muted></video>
-            </div>
-
-            <div class="project-info">
-                <span class="tag">Website</span>
-                <h2>ARC Construtora</h2>
-                <p>
-                    Site institucional desenvolvido para ARC construtora, adicionado de uma página mostrando
-                    seus case de sucesso.
-                </p>
-
-                <div class="tech">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-
-                <a href="https://arc-construtora.vercel.app/" class="btn">Ver Projeto</a>
-            </div>
-
-        </div>
-
-        <div class="project-row">
-
-            <div class="project-visual">
-                <video src="videos/aureavideo.mp4" loop autoplay muted></video>
-            </div>
-
-            <div class="project-info">
-                <span class="tag">E-commerce</span>
-                <h2>Aurea Maison</h2>
-                <p>
-                    Loja online de joias de alto padrão, design impecável, fino e luxuoso.
-                </p>
-
-                <div class="tech">
-                    <span>Vite</span>
-                    <span>Tailwind</span>
-                    <span>JavaScript</span>
-                </div>
-
-                <a href="https://aureamaison.vercel.app/" class="btn">Ver Projeto</a>
-            </div>
-
-        </div>
-
-        <div class="project-row reverse">
-
-            <div class="project-visual">
-                <video src="videos/odontovideo.mp4" loop autoplay muted></video>
-            </div>
-
-            <div class="project-info">
-                <span class="tag">Website</span>
-                <h2>Dra. Isabel Meireles</h2>
-                <p>
-                    Site institucional Dra. Isabel Meireles, site responsivo, bonito e focado para
-                    conversão e captação de clientes.
-                </p>
-
-                <div class="tech">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-
-                <a href="https://draisabelmeireles.vercel.app/" class="btn">Ver Projeto</a>
-            </div>
-
-        </div>
-
-        <div class="project-row">
-
-            <div class="project-visual">
-                <video src="videos/gastovideo.mp4" loop autoplay muted></video>
-            </div>
-
-            <div class="project-info">
-                <span class="tag">Sistema Web</span>
-                <h2>Sistema de Controle Financeiro</h2>
-                <p>
-                    Sistema desenvoolvido para controle de gastos, pessoais e profissionais. Rápido e fácil.
-                </p>
-
-                <div class="tech">
-                    <span>PHP</span>
-                    <span>Bootstrap</span>
-                    <span>MySQL</span>
-                    <span>JavaScript</span>
-                </div>
-
-                <a href="https://app-financeiro-peach.vercel.app/" class="btn">Ver Projeto</a>
-            </div>
-
-        </div>
-
-        <div class="project-row reverse">
-
-            <div class="project-visual">
-                <video src="videos/cotavideo.mp4" loop autoplay muted></video>
-            </div>
-
-            <div class="project-info">
-                <span class="tag">Sistema Web</span>
-                <h2>Cota Simples</h2>
-                <p>
-                    Cota simples é um sistema web desenvolvido com foco em orçamentos rapido, direto e formal.
-                </p>
-
-                <div class="tech">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-
-                <a href="https://www.cotasimples.online/" class="btn">Ver Projeto</a>
-            </div>
-
-        </div>
-
     </section>
 
 
-    <section class="cta-final">
-        <div class="cta-container">
+    <footer class="footer">
 
-            <h2>Vamos criar algo incrível juntos</h2>
+        <div class="footer-container">
+
+            <!-- Coluna 1 - Marca -->
+            <div class="footer-brand">
+
+                <img src="img/logo.png" class="footer-logo">
+
+                <p>
+                    Desenvolvemos sites e sistemas modernos com foco em resultados reais,
+                    ajudando empresas a crescer e vender mais no digital.
+                </p>
+
+            </div>
+
+            <!-- Coluna 2 - Serviços -->
+            <div class="footer-column">
+
+                <h4>Serviços</h4>
+
+                <a
+                    href="https://wa.me/5598981473574?text=Ol%C3%A1%20Davi,%20eu%20gostaria%20de%20fazer%20um%20projeto%20com%20voc%C3%AA%F0%9F%98%83">Criação
+                    de Sites</a>
+                <a
+                    href="https://wa.me/5598981473574?text=Ol%C3%A1%20Davi,%20eu%20gostaria%20de%20fazer%20um%20projeto%20com%20voc%C3%AA%F0%9F%98%83">Landing
+                    Pages</a>
+                <a
+                    href="https://wa.me/5598981473574?text=Ol%C3%A1%20Davi,%20eu%20gostaria%20de%20fazer%20um%20projeto%20com%20voc%C3%AA%F0%9F%98%83">Sistemas
+                    Web</a>
+                <a
+                    href="https://wa.me/5598981473574?text=Ol%C3%A1%20Davi,%20eu%20gostaria%20de%20fazer%20um%20projeto%20com%20voc%C3%AA%F0%9F%98%83">Sistemas
+                    de Agendamento</a>
+                <a
+                    href="https://wa.me/5598981473574?text=Ol%C3%A1%20Davi,%20eu%20gostaria%20de%20fazer%20um%20projeto%20com%20voc%C3%AA%F0%9F%98%83">Sistemas
+                    Delivery</a>
+
+            </div>
+
+            <!-- Coluna 3 - Empresa -->
+            <div class="footer-column">
+
+                <h4>Empresa</h4>
+
+                <a href="#aboutme">Sobre</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="#contactForm">Contato</a>
+
+            </div>
+
+            <!-- Coluna 4 - Contato -->
+            <div class="footer-column">
+
+                <h4>Contato e Social</h4>
+
+                <a href="#">daviladwigdev@gmail.com</a>
+                <a href="https://www.instagram.com/davi_ladwig">Instagram</a>
+
+            </div>
+
+        </div>
+
+        <!-- Linha inferior -->
+
+        <div class="footer-bottom">
+
+            <div class="footer-line"></div>
 
             <p>
-                Se você precisa de um site, sistema ou automação com inteligência artificial,
-                entre em contato agora e vamos transformar sua ideia em realidade.
+                © 2026 DAVI LADWIG. Todos os direitos reservados.
             </p>
 
-            <a href="https://wa.me/5598981473574" target="_blank" class="cta-button">
-                Falar no WhatsApp
-            </a>
-
         </div>
-    </section>
+
+    </footer>
 
     <script src="script.js"></script>
 
