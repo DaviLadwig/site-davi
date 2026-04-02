@@ -126,6 +126,33 @@
   line-height: 1.7;
 }
 
+.project-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+  padding: 12px 22px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0d6ca8, #1590d1);
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 24px rgba(13, 108, 168, 0.28);
+}
+
+.project-button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #1590d1, #1ca3e8);
+  box-shadow: 0 12px 28px rgba(21, 144, 209, 0.35);
+}
+
+.project-button span {
+  margin-left: 8px;
+  font-size: 1rem;
+}
+
 @media (max-width: 992px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
