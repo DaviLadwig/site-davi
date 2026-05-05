@@ -1,0 +1,144 @@
+/* =========================================
+   CTA IMPACT
+========================================= */
+
+.cta-impact {
+    position: relative;
+    padding: 130px 0;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 70% 30%, rgba(183, 255, 0, 0.07), transparent 20%),
+        linear-gradient(180deg, #05070a 0%, #06080b 100%);
+}
+
+.cta-impact__container {
+    width: min(1500px, 100%);
+    margin: 0 auto;
+    padding: 0 56px;
+    text-align: center;
+}
+
+.cta-impact__top {
+    margin-bottom: 26px;
+}
+
+.cta-impact__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #b7ff00;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.cta-impact__eyebrow::before,
+.cta-impact__eyebrow::after {
+    content: "";
+    width: 42px;
+    height: 1px;
+    background: rgba(183, 255, 0, 0.75);
+    display: inline-block;
+}
+
+.cta-impact__title {
+    max-width: 1500px;
+    margin: 0 auto 34px;
+    color: #f5f5f2;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3.8rem, 8vw, 8.8rem);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+
+.cta-impact__title span {
+    color: #b7ff00;
+}
+
+.cta-impact__text {
+    max-width: 850px;
+    margin: 0 auto 14px;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 1.08rem;
+    line-height: 1.85;
+    font-weight: 500;
+}
+
+.cta-impact__actions {
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
+}
+
+.cta-impact__btn {
+    min-width: 300px;
+    min-height: 58px;
+    padding: 0 28px;
+    border-radius: 14px;
+    background: #b7ff00;
+    color: #05070a;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition: 0.35s ease;
+    box-shadow: 0 16px 40px rgba(183, 255, 0, 0.14);
+}
+
+.cta-impact__btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 22px 50px rgba(183, 255, 0, 0.2);
+}
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 768px) {
+    .cta-impact {
+        padding: 90px 0;
+    }
+
+    .cta-impact__container {
+        padding: 0 20px;
+    }
+
+    .cta-impact__eyebrow {
+        font-size: 0.68rem;
+        letter-spacing: 0.16em;
+    }
+
+    .cta-impact__eyebrow::before,
+    .cta-impact__eyebrow::after {
+        width: 24px;
+    }
+
+    .cta-impact__title {
+        font-size: clamp(2.8rem, 14vw, 5rem);
+        line-height: 0.98;
+        margin-bottom: 24px;
+    }
+
+    .cta-impact__text {
+        font-size: 0.96rem;
+        line-height: 1.75;
+    }
+
+    .cta-impact__actions {
+        margin-top: 28px;
+    }
+
+    .cta-impact__btn {
+        width: 100%;
+        min-width: 0;
+        min-height: 54px;
+        font-size: 0.82rem;
+        letter-spacing: 0.1em;
+    }
+}
