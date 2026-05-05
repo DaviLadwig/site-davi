@@ -1,14 +1,91 @@
+//intro
+document.addEventListener("DOMContentLoaded", () => {
+    const intro = document.getElementById("introSequence");
+
+    if (!intro) return;
+
+    const steps = intro.querySelectorAll(".intro-step");
+
+    document.body.classList.add("intro-running");
+
+    const timeline = [
+        { index: 0, duration: 1600 },
+        { index: 1, duration: 1050 },
+        { index: 2, duration: 1150 },
+        { index: 3, duration: 1050 },
+        { index: 4, duration: 1200 }
+    ];
+
+    let currentDelay = 0;
+
+    timeline.forEach((item) => {
+        setTimeout(() => {
+            steps.forEach((step) => step.classList.remove("active"));
+            steps[item.index].classList.add("active");
+        }, currentDelay);
+
+        currentDelay += item.duration;
+    });
+
+    setTimeout(() => {
+        intro.classList.add("hide");
+        document.body.classList.remove("intro-running");
+    }, currentDelay);
+
+    setTimeout(() => {
+        intro.remove();
+    }, currentDelay + 1000);
+});
+
+
 
 //MENU RESPONSIVO
-const toggle = document.getElementById("menuToggle");
-const nav = document.getElementById("navMobile");
 
-toggle.addEventListener("click", () => {
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuBtn = document.getElementById("portfolioMenuBtn");
+    const menu = document.getElementById("portfolioMenu");
+    const menuLinks = menu.querySelectorAll("a[href^='#']");
 
-    toggle.classList.toggle("active");
-    nav.classList.toggle("active");
+    if (!menuBtn || !menu) return;
 
-});
+    function openMenu() {
+        menuBtn.classList.add("is-open");
+    menu.classList.add("is-open");
+    document.body.classList.add("menu-open");
+
+    menuBtn.setAttribute("aria-expanded", "true");
+    menu.setAttribute("aria-hidden", "false");
+        }
+
+    function closeMenu() {
+        menuBtn.classList.remove("is-open");
+    menu.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
+
+    menuBtn.setAttribute("aria-expanded", "false");
+    menu.setAttribute("aria-hidden", "true");
+        }
+
+        menuBtn.addEventListener("click", () => {
+            const isOpen = menu.classList.contains("is-open");
+
+    if (isOpen) {
+        closeMenu();
+            } else {
+        openMenu();
+            }
+        });
+
+        menuLinks.forEach((link) => {
+        link.addEventListener("click", closeMenu);
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+        closeMenu();
+            }
+        });
+    });
 
 //PARTICULAS TECNOLOGICAS
 
@@ -145,7 +222,7 @@ document.querySelectorAll('.faq-question').forEach(button => {
 
         const faqItem = button.parentElement
         const answer = faqItem.querySelector('.faq-answer')
- 
+
         if (faqItem.classList.contains('active')) {
 
             answer.style.height = answer.scrollHeight + 'px'
@@ -205,7 +282,7 @@ const button = document.getElementById("submitBtn");
 const success = document.getElementById("formSuccess");
 
 form.addEventListener("submit", async function (e) {
-        
+
     e.preventDefault();
 
     button.classList.add("loading");

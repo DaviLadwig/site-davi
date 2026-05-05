@@ -14,141 +14,171 @@
 </head>
 
 <body>
-    <canvas id="neuralCanvas"></canvas>
+    <!--INTRO-->
+    <div class="intro-sequence" id="introSequence">
+        <div class="intro-noise"></div>
+
+        <section class="intro-step intro-step-main active">
+            <div class="intro-kicker">Davi Ladwig</div>
+
+            <h1>
+                Crio experiências
+                <span>digitais memoráveis</span>
+            </h1>
+        </section>
+
+        <section class="intro-step intro-step-branding">
+            <span class="intro-index">01</span>
+            <h2>Branding</h2>
+        </section>
+
+        <section class="intro-step intro-step-systems">
+            <span class="intro-index">02</span>
+            <h2>Sistemas</h2>
+        </section>
+
+        <section class="intro-step intro-step-sites">
+            <span class="intro-index">03</span>
+            <h2>Sites</h2>
+        </section>
+
+        <section class="intro-step intro-step-final">
+            <div class="intro-final-content">
+                <span>Estratégia • Design • Desenvolvimento</span>
+                <h2>Davi Ladwig</h2>
+            </div>
+        </section>
+
+        <div class="intro-wipe"></div>
+    </div>
 
 
-    <header class="header">
+    <header class="portfolio-header" id="portfolioHeader">
+        <div class="portfolio-header__inner">
+            <a href="index.html" class="portfolio-header__brand" aria-label="Davi Ladwig">
+                <img src="./img/logo.png" alt="Davi Ladwig">
+            </a>
 
-        <div class="header-container">
-
-            <!-- Logo -->
-            <div class="logo">
-                <img src="img/logo.png" alt="Code Company">
+            <div class="portfolio-header__location">
+                Maranhão — Brasil
             </div>
 
-            <!-- Menu Desktop -->
-            <nav class="nav-desktop">
-                <a href="index.html">Início</a>
-                <a href="#servicesme">Serviços</a>
-                <a href="projetos.html">Projetos</a>
-                <a href="#contactForm">Contato</a>
-            </nav>
+            <div class="portfolio-header__actions">
+                <a href="https://wa.me/5598999999999" class="portfolio-header__cta" target="_blank">
+                    Solicitar orçamento
+                    <span>→</span>
+                </a>
 
-            <!-- CTA Desktop -->
-            <a href="https://wa.me/5598981473574?text=Ol%C3%A1%20Davi,%20eu%20gostaria%20de%20fazer%20um%20projeto%20com%20voc%C3%AA%F0%9F%98%83"
-                class="cta-btn" target="_blank">Começar projeto</a>
-
-            <!-- Hamburger -->
-            <div class="menu-toggle" id="menuToggle">
-
-                <span></span>
-                <span></span>
-                <span></span>
-
+                <button class="portfolio-menu-btn" id="portfolioMenuBtn" aria-label="Abrir menu" aria-expanded="false">
+                    <span class="portfolio-menu-btn__icon">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
+                    <strong>Menu</strong>
+                </button>
             </div>
-
         </div>
-
     </header>
 
+    <nav class="portfolio-menu" id="portfolioMenu" aria-hidden="true">
+        <div class="portfolio-menu__top">
+            <a href="index.html" class="portfolio-menu__brand" aria-label="Davi Ladwig">
+                <img src="./assets/img/logo-davi.svg" alt="Davi Ladwig">
+            </a>
 
-    <!-- Menu Mobile -->
-    <nav class="nav-mobile" id="navMobile">
+            <span class="portfolio-menu__location">Maranhão — Brasil</span>
 
-        <a href="#">Início</a>
-        <a href="#servicesme">Serviços</a>
-        <a href="projetos.html">Projetos</a>
-        <a href="#contactForm">Contato</a>
+            <a href="https://wa.me/5598999999999" class="portfolio-menu__cta" target="_blank">
+                Solicitar orçamento <b>→</b>
+            </a>
+        </div>
 
-        <a href="https://wa.me/5598981473574?text=Ol%C3%A1%20Davi,%20eu%20gostaria%20de%20fazer%20um%20projeto%20com%20voc%C3%AA%F0%9F%98%83"
-            class="cta-mobile" target="_blank">Começar projeto</a>
+        <div class="portfolio-menu__content">
+            <ul class="portfolio-menu__list">
+                <li style="--i: 1">
+                    <a href="#sobre">
+                        <span>Sobre</span>
+                        <small>01</small>
+                    </a>
+                </li>
 
+                <li style="--i: 2">
+                    <a href="#servicos">
+                        <span>Serviços</span>
+                        <small>02</small>
+                    </a>
+                </li>
+
+                <li style="--i: 3">
+                    <a href="#portfolio">
+                        <span>Portfólio</span>
+                        <small>03</small>
+                    </a>
+                </li>
+
+                <li style="--i: 4">
+                    <a href="#processo">
+                        <span>Processo</span>
+                        <small>04</small>
+                    </a>
+                </li>
+
+                <li style="--i: 5">
+                    <a href="#contato">
+                        <span>Contato</span>
+                        <small>05</small>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="portfolio-menu__footer">
+            <a href="tel:+5598999999999">(98) 99999-9999</a>
+            <a href="mailto:contato@daviladwig.com.br">contato@daviladwig.com.br</a>
+        </div>
     </nav>
 
     <!--HERO SECTION-->
-    <section class="hero">
+    <section class="hero-impact">
+        <div class="hero-impact__bg"></div>
 
-        <div class="hero-container">
+        <div class="hero-impact__container">
+            <div class="hero-impact__content">
+                <h1 class="hero-impact__title">
+                    <span class="hero-impact__line hero-impact__line--solid">
+                        Desenvolvo
+                    </span>
 
-            <div class="hero-content">
+                    <span class="hero-impact__line hero-impact__line--outline">
+                        soluções ideais
+                    </span>
 
-                <div class="hero-label animate animate-left">
-                    DAVI LADWIG®
-                </div>
-
-                <h1 class="hero-title animate animate-left">
-                    Websites e sistemas<br>
-                    com padrão de<br>
-                    <span>alto nível.</span>
+                    <span class="hero-impact__line hero-impact__line--accent">
+                        para o seu negócio.
+                    </span>
                 </h1>
 
-                <p class="hero-description animate-scale">
-                    Projetamos e desenvolvemos soluções digitais sob medida
-                    para empresas que buscam performance, autoridade e crescimento.
+                <p class="hero-impact__text">
+                    Criação de sites, landing pages e sistemas web com foco em presença digital,
+                    performance e conversão.
                 </p>
 
-                <div class="hero-buttons">
-
-                    <a href="#" class="btn-primary">
+                <div class="hero-impact__actions">
+                    <a href="#contato" class="hero-impact__btn hero-impact__btn--primary">
                         Solicitar orçamento
                     </a>
 
-                    <a href="projetos.html" class="btn-secondary">
+                    <a href="#portfolio" class="hero-impact__btn hero-impact__btn--ghost">
                         Ver projetos
                     </a>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
-
-
 
     <!--SECTION SOBRE-->
-    <section class="about" id="aboutme">
-        <div class="about-overlay"></div>
 
-        <div class="about-content reveal reveal-left">
-            <span class="about-badge">SOBRE</span>
-
-            <h2 class="reveal reveal-left">
-                Tecnologia que impulsiona <span>negócios reais</span>
-            </h2>
-
-            <p><br>
-                DAVI LADWIG é um programador especializada no desenvolvimento de websites,
-                landing pages e sistemas personalizados. Nosso foco é criar soluções
-                modernas, rápidas e eficientes que ajudam empresas a crescer e se destacar
-                no digital.
-            </p>
-
-            <p>
-                Eu e minha equipe trabalhamos como parceiros estratégicos dos nossos clientes, entendendo
-                suas necessidades e transformando ideias em sistemas funcionais, com
-                design profissional e tecnologia de ponta.
-            </p>
-
-            <div class="about-stats">
-                <div class="stat">
-                    <h3>100%</h3>
-                    <span>Projetos personalizados</span>
-                </div>
-
-                <div class="stat">
-                    <h3>Alta</h3>
-                    <span>Performance</span>
-                </div>
-
-                <div class="stat">
-                    <h3>Total</h3>
-                    <span>Suporte e parceria</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!--SECTION RESULTADOS-->
     <section class="results">
