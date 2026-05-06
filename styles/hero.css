@@ -157,7 +157,7 @@
   }
 
   .hero-impact__line {
-    font-size: clamp(3.1rem, 17vw, 5.8rem);
+    font-size: clamp(3.1rem, 15vw, 5.8rem);
     line-height: 0.94;
   }
 

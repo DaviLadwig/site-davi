@@ -137,9 +137,6 @@
 }
 
 .services-mockup {
-    width: min(100%, 620px);
-    min-height: 370px;
-    border-radius: 18px;
     overflow: hidden;
     background:
         linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025)),
@@ -148,6 +145,10 @@
     box-shadow:
         0 30px 90px rgba(0, 0, 0, 0.45),
         0 0 80px rgba(183, 255, 0, 0.08);
+
+    width: min(100%, 480px);
+    min-height: 300px;
+    border-radius: 16px;
 }
 
 .services-mockup__bar {
@@ -195,7 +196,7 @@
 }
 
 .services-mockup__body {
-    padding: 24px;
+    padding: 18px;
 }
 
 .services-mockup__top {
@@ -219,10 +220,10 @@
 }
 
 .services-mockup__main {
-    margin-top: 34px;
+    margin-top: 24px;
     display: grid;
     grid-template-columns: 1fr 0.9fr;
-    gap: 24px;
+    gap: 16px;
 }
 
 .services-mockup__content span {
@@ -301,10 +302,10 @@
 }
 
 .services-mockup__cards {
-    margin-top: 34px;
+    margin-top: 24px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    gap: 12px;
 }
 
 .services-mockup__cards span {
@@ -337,4 +338,46 @@
     height: 12px;
     background: #b7ff00;
     box-shadow: 0 0 20px rgba(183, 255, 0, 0.75);
+}
+
+@media (max-width: 900px) {
+
+    .services-pin {
+        height: 400vh;
+        /* 🔥 reduz altura (antes 600vh) */
+    }
+
+    .services-pin__container {
+        grid-template-columns: 1fr;
+        /* empilha */
+        gap: 40px;
+        padding: 100px 24px;
+    }
+
+    .services-pin__left {
+        order: 1;
+    }
+
+    .services-pin__right {
+        order: 2;
+    }
+
+    .services-pin__title {
+        font-size: clamp(3rem, 10vw, 4.5rem);
+    }
+
+    .services-pin__description {
+        margin-top: 24px;
+        font-size: 0.95rem;
+    }
+
+    .services-mockup {
+        width: min(100%, 380px);
+        max-height: 300px;
+        border-radius: 16px;
+    }
+
+    .services-mockup__main {
+        grid-template-columns: 1fr;
+    }
 }

@@ -10,15 +10,64 @@ body {
     margin: 0;
     background: rgb(224, 220, 220);
     overflow-x: hidden;
+    cursor: none;
 
+}
+
+*,
+*::before,
+*::after {
+    cursor: none !important;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-
 /*  
 fonte original
 font-family: "Bebas Neue", sans-serif;
 */
+
+/* container */
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 11000;
+}
+
+/* bolinha central */
+.cursor__dot {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: #b7ff00;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* círculo externo */
+.cursor__circle {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid rgba(183, 255, 0, 0.6);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition:
+        width 0.25s ease,
+        height 0.25s ease,
+        border 0.25s ease,
+        background 0.25s ease;
+}
+
+/* hover (quando passa em botão/link) */
+.cursor.hover .cursor__circle {
+    width: 70px;
+    height: 70px;
+    background: rgba(183, 255, 0, 0.15);
+    border-color: #b7ff00;
+}

@@ -68,7 +68,7 @@
 
 @media (max-width: 768px) {
     .services-marquee-section {
-        height: 58px;
+        height: 48px;
     }
 
     .services-marquee__track {
@@ -76,7 +76,7 @@
     }
 
     .services-marquee__content span {
-        font-size: 1rem;
+        font-size: 0.85rem;
         padding: 0 16px;
         letter-spacing: 0.06em;
     }

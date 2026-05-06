@@ -224,10 +224,21 @@
     }
 
     .project-card__content h3 {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     .project-card__content p {
         font-size: 0.82rem;
+    }
+
+    .projects-showcase__title span {
+        font-size: clamp(3rem, 10vw, 4.5rem);
+
+    }
+    
+    .projects-showcase__header{
+        display: flex;
+        flex-direction: column;
+        margin-right: 60px;
     }
 }
