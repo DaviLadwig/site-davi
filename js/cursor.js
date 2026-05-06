@@ -1,44 +1,26 @@
-const cursor = document.querySelector(".cursor");
-const dot = document.querySelector(".cursor__dot");
-const circle = document.querySelector(".cursor__circle");
 
-let mouseX = 0;
-let mouseY = 0;
+const cursor = document.querySelector('.cursor');
+const dot = document.querySelector('.cursor__dot');
+const circle = document.querySelector('.cursor__circle');
 
-let circleX = 0;
-let circleY = 0;
+window.addEventListener('mousemove', (e) => {
+    dot.style.left = `${e.clientX}px`;
+    dot.style.top = `${e.clientY}px`;
 
-// pega posição do mouse
-document.addEventListener("mousemove", (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-
-    // dot acompanha instantâneo
-    dot.style.left = mouseX + "px";
-    dot.style.top = mouseY + "px";
+    circle.style.left = `${e.clientX}px`;
+    circle.style.top = `${e.clientY}px`;
 });
 
-// animação suave do círculo (efeito lag)
-function animate() {
-    circleX += (mouseX - circleX) * 0.15;
-    circleY += (mouseY - circleY) * 0.15;
+const hoverElements = document.querySelectorAll(
+    'a, button, input, textarea, select, [data-cursor-hover]'
+);
 
-    circle.style.left = circleX + "px";
-    circle.style.top = circleY + "px";
-
-    requestAnimationFrame(animate);
-}
-
-animate();
-
-const hoverItems = document.querySelectorAll("a, button, .hover-target");
-
-hoverItems.forEach(item => {
-    item.addEventListener("mouseenter", () => {
-        cursor.classList.add("hover");
+hoverElements.forEach((el) => {
+    el.addEventListener('mouseenter', () => {
+        cursor.classList.add('hover');
     });
 
-    item.addEventListener("mouseleave", () => {
-        cursor.classList.remove("hover");
+    el.addEventListener('mouseleave', () => {
+        cursor.classList.remove('hover');
     });
 });
