@@ -25,6 +25,20 @@ html {
     scroll-behavior: smooth;
 }
 
+@media (hover: none), (pointer: coarse) {
+    body,
+    *,
+    *::before,
+    *::after {
+        cursor: auto !important;
+    }
+
+    .cursor {
+        display: none !important;
+    }
+}
+
+
 /*  
 fonte original
 font-family: "Bebas Neue", sans-serif;
