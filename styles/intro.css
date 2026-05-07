@@ -273,11 +273,17 @@ body.intro-running {
         top: 28px;
         font-size: 0.68rem;
         letter-spacing: 0.3em;
+       
     }
 
     .intro-index {
         top: 28px;
         left: 24px;
+        
+    }
+
+    .intro-step{
+         padding: 32px 16px;
     }
 
     .intro-step-main h1 {
