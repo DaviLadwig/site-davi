@@ -32,7 +32,7 @@
     margin: 0;
     color: #f5f5f2;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(5rem, 11vw, 9.5rem);
+    font-size: clamp(5rem, 8vw, 9.5rem);
     line-height: 0.88;
     letter-spacing: -0.02em;
     text-transform: uppercase;

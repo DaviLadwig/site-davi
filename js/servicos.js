@@ -1,164 +1,116 @@
-console.log("servicos.js carregou");
-
 document.addEventListener("DOMContentLoaded", () => {
-    const section = document.querySelector(".services-pin");
 
+    const section = document.querySelector(".services-showcase");
+
+    const number = document.getElementById("serviceNumber");
     const label = document.getElementById("serviceLabel");
     const title = document.getElementById("serviceTitle");
     const description = document.getElementById("serviceDescription");
     const tags = document.getElementById("serviceTags");
-    const mockupTitle = document.getElementById("serviceMockupTitle");
-    const metric = document.getElementById("serviceMetric");
-    const status = document.getElementById("serviceStatus");
-    const dots = document.querySelectorAll("[data-service-dot]");
 
-    if (!section || !label || !title || !description || !tags) {
-        console.warn("Serviços: elementos não encontrados.");
-        return;
-    }
+    const visuals = document.querySelectorAll(".service-visual");
 
     const services = [
         {
-            label: "01 - Sites",
-            title: "Sites",
-            description: "Crio sites modernos, responsivos e estratégicos para empresas que precisam transmitir autoridade, gerar confiança e transformar visitantes em clientes.",
-            tags: ["Responsivo", "Design exclusivo", "SEO inicial", "Performance"],
-            mockupTitle: "SITE",
-            metric: "+42% conversão",
-            status: "Online"
+            number: "01",
+            label: "Sites",
+            title: "Sites modernos<br>e estratégicos.",
+            description:
+                "Crio sites modernos, rápidos e responsivos para empresas que precisam transmitir autoridade e converter visitantes em clientes.",
+            tags: ["Responsivo", "SEO", "Performance"]
         },
+
         {
-            label: "02 - Landing Pages",
-            title: "Landing Pages",
-            description: "Desenvolvo landing pages focadas em conversão, ideais para campanhas, anúncios, lançamentos e captação de clientes qualificados.",
-            tags: ["Alta conversão", "Copy estratégica", "CTA direto", "Leads"],
-            mockupTitle: "LANDING",
-            metric: "+68% leads",
-            status: "Campanha"
+            number: "02",
+            label: "Landing Pages",
+            title: "Landing pages<br>de alta conversão.",
+            description:
+                "Páginas estratégicas focadas em anúncios, campanhas e geração de leads qualificados.",
+            tags: ["Conversão", "CTA", "Leads"]
         },
+
         {
-            label: "03 - Sistemas Personalizados",
-            title: "Sistemas Personalizados",
-            description: "Construo sistemas sob medida para organizar processos, controlar informações, automatizar tarefas e profissionalizar operações.",
-            tags: ["Painel admin", "Banco de dados", "Automação", "Escalável"],
-            mockupTitle: "SYSTEM",
-            metric: "-55% processos manuais",
-            status: "Gestão"
+            number: "03",
+            label: "Sistemas",
+            title: "Sistemas<br>personalizados.",
+            description:
+                "Desenvolvimento de plataformas, painéis administrativos e sistemas internos sob medida.",
+            tags: ["Dashboard", "Automação", "Escalável"]
         },
+
         {
-            label: "04 - UI e UX Design",
-            title: "UI/UX Design",
-            description: "Crio interfaces modernas, claras e intuitivas, pensadas para melhorar a experiência do usuário e valorizar a percepção da marca.",
-            tags: ["Interface", "Usabilidade", "Protótipo", "Experiência"],
-            mockupTitle: "UI/UX",
-            metric: "+37% retenção",
-            status: "Design"
+            number: "04",
+            label: "UI UX",
+            title: "Interfaces<br>claras e modernas.",
+            description:
+                "Criação de interfaces intuitivas focadas em experiência e percepção visual premium.",
+            tags: ["UI", "UX", "Wireframe"]
         },
+
         {
-            label: "05 - Manutenção e Personalização",
-            title: "Manutenção e Personalização",
-            description: "Faço ajustes, correções, melhorias visuais, novas seções e personalizações em sites e sistemas já existentes.",
-            tags: ["Correções", "Melhorias", "Suporte", "Novas seções"],
-            mockupTitle: "SUPORTE",
-            metric: "+80% estabilidade",
-            status: "Ativo"
+            number: "05",
+            label: "Manutenção",
+            title: "Manutenção<br>e melhorias.",
+            description:
+                "Correções, ajustes, personalizações e suporte contínuo para sites e sistemas.",
+            tags: ["Suporte", "Atualizações", "Correções"]
         },
+
         {
-            label: "06 - SEO e Performance",
-            title: "SEO e Performance",
-            description: "Otimizo estrutura, carregamento, organização e boas práticas para que seu site seja mais rápido, profissional e preparado para o Google.",
-            tags: ["Velocidade", "Google", "Otimização", "Boas práticas"],
-            mockupTitle: "SEO",
-            metric: "+61% velocidade",
-            status: "Otimizado"
+            number: "06",
+            label: "SEO",
+            title: "SEO e<br>performance.",
+            description:
+                "Estrutura otimizada para carregamento rápido e melhor posicionamento no Google.",
+            tags: ["SEO", "Velocidade", "Google"]
         }
     ];
 
-    let activeIndex = -1;
+    let current = 0;
 
     function render(index) {
-        if (index === activeIndex) return;
 
-        const service = services[index];
+        const item = services[index];
 
-        label.textContent = service.label;
-        title.textContent = service.title;
-        description.textContent = service.description;
+        number.textContent = item.number;
+        label.textContent = item.label;
 
-        tags.innerHTML = service.tags.map(tag => `<span>${tag}</span>`).join("");
+        title.innerHTML = item.title;
 
-        if (mockupTitle) mockupTitle.textContent = service.mockupTitle;
-        if (metric) metric.textContent = service.metric;
-        if (status) status.textContent = service.status;
+        description.textContent = item.description;
 
-        dots.forEach(dot => dot.classList.remove("active"));
-        if (dots[index]) dots[index].classList.add("active");
+        tags.innerHTML = item.tags
+            .map(tag => `<span>${tag}</span>`)
+            .join("");
 
-        activeIndex = index;
+        visuals.forEach(v => v.classList.remove("active"));
 
-        console.log("Mostrando:", index, service.title);
+        visuals[index].classList.add("active");
     }
 
-    function handleScroll() {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const viewportHeight = window.innerHeight;
+    function updateScroll() {
 
-        const start = sectionTop;
-        const end = sectionTop + sectionHeight - viewportHeight;
+        const rect = section.getBoundingClientRect();
 
-        const scrollY = window.scrollY;
+        const progress =
+            Math.min(
+                Math.max(-rect.top / (section.offsetHeight - window.innerHeight), 0),
+                1
+            );
 
-        if (scrollY < start) {
-            section.classList.remove("is-fixed", "is-ended");
-            render(0);
-            return;
-        }
-
-        if (scrollY >= start && scrollY <= end) {
-            section.classList.add("is-fixed");
-            section.classList.remove("is-ended");
-
-            const progress = (scrollY - start) / (end - start);
-            const index = Math.min(
+        const index =
+            Math.min(
                 services.length - 1,
                 Math.floor(progress * services.length)
             );
 
+        if (index !== current) {
+            current = index;
             render(index);
-            return;
-        }
-
-        if (scrollY > end) {
-            section.classList.remove("is-fixed");
-            section.classList.add("is-ended");
-            render(services.length - 1);
         }
     }
 
-    dots.forEach(dot => {
-        dot.addEventListener("click", () => {
-            const index = Number(dot.dataset.serviceDot);
-
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const viewportHeight = window.innerHeight;
-
-            const end = sectionTop + sectionHeight - viewportHeight;
-            const total = end - sectionTop;
-
-            const target = sectionTop + total * (index / services.length);
-
-            window.scrollTo({
-                top: target + 4,
-                behavior: "smooth"
-            });
-        });
-    });
-
     render(0);
-    handleScroll();
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    window.addEventListener("resize", handleScroll);
+    window.addEventListener("scroll", updateScroll);
 });

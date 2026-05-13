@@ -51,7 +51,7 @@
 
 .hero-impact__line {
   display: block;
-  font-size: clamp(4.6rem, 10vw, 11.5rem);
+  font-size: clamp(4.6rem, 8vw, 11.5rem);
   line-height: 0.88;
   letter-spacing: -0.07em;
   font-weight: 900;
