@@ -1,66 +1,72 @@
 /* =========================================
-   PROCESS PIN - VERSÃO ESTÁVEL
+   PROCESSO - VERSÃO EM COLUNA / SEM JS
 ========================================= */
 
 .process-pin {
     position: relative;
-    height: 420vh;
+    width: 100%;
+    height: auto !important;
+    min-height: auto !important;
+    padding: clamp(90px, 12vw, 160px) 0;
     background:
-        radial-gradient(circle at 70% 35%, rgba(183, 255, 0, 0.06), transparent 20%),
+        radial-gradient(circle at 70% 18%, rgba(183, 255, 0, 0.07), transparent 26%),
+        radial-gradient(circle at 12% 75%, rgba(183, 255, 0, 0.045), transparent 24%),
         linear-gradient(180deg, #05070a 0%, #06080b 100%);
-    overflow: visible !important;
+    color: #f5f5f2;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .process-pin__scroll {
-    position: relative;
-    height: 100%;
+    position: relative !important;
+    width: min(1180px, calc(100% - 44px));
+    height: auto !important;
+    min-height: auto !important;
+    margin: 0 auto;
     overflow: visible !important;
 }
 
 .process-pin__sticky {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
     width: 100%;
-    height: 100vh;
-    min-height: 720px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background:
-        radial-gradient(circle at 70% 35%, rgba(183, 255, 0, 0.06), transparent 20%),
-        linear-gradient(180deg, #05070a 0%, #06080b 100%);
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    z-index: 2;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+    display: block;
+    background: transparent;
+    border: 0;
+    z-index: 1;
 }
 
-.process-pin.is-fixed .process-pin__sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
+/* Neutraliza classes antigas caso ainda existam no HTML/CSS */
+.process-pin.is-fixed .process-pin__sticky,
 .process-pin.is-ended .process-pin__sticky {
-    position: absolute;
-    top: auto;
-    bottom: 0;
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
 }
 
-/* Header fixo dentro da section */
+/* =========================================
+   HEADER
+========================================= */
 
 .process-pin__header {
-    position: absolute;
-    top: 125px;
-    left: 68px;
-    z-index: 8;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    max-width: 1260px;
+    margin-bottom: clamp(56px, 8vw, 100px);
+    z-index: 2;
 }
 
 .process-pin__eyebrow {
     display: block;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
     color: rgba(255, 255, 255, 0.48);
     font-size: 0.78rem;
     font-weight: 900;
@@ -72,8 +78,8 @@
     margin: 0;
     color: #f5f5f2;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(3.8rem, 5.5vw, 6rem);
-    line-height: 0.9;
+    font-size: clamp(3.8rem, 7vw, 7rem);
+    line-height: 0.88;
     letter-spacing: -0.01em;
     font-weight: 400;
     text-transform: uppercase;
@@ -84,55 +90,87 @@
     color: #b7ff00;
 }
 
-/* Viewport */
+/* =========================================
+   LISTA / TRACK EM COLUNA
+========================================= */
 
 .process-pin__viewport {
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
+    height: auto !important;
+    overflow: visible !important;
+    display: block !important;
+    padding: 0 !important;
 }
 
 .process-pin__track {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    will-change: transform;
-    transition: transform 0.05s linear;
+    width: 100% !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto !important;
 }
 
-/* Cada passo ocupa uma tela inteira */
+/* =========================================
+   CADA ETAPA
+========================================= */
 
 .process-step {
-    flex: 0 0 100vw;
-    width: 100vw;
-    height: 100%;
+    position: relative;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    flex: initial !important;
     display: grid;
-    grid-template-columns: 330px minmax(320px, 720px);
+    grid-template-columns: minmax(140px, 260px) 1fr;
+    gap: clamp(32px, 6vw, 90px);
     align-items: center;
-    gap: 80px;
-    padding: 120px 68px 60px;
+    padding: clamp(42px, 6vw, 78px) 0;
     box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.process-step:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .process-step__number {
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.18);
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+    -webkit-text-stroke: 1.3px rgba(255, 255, 255, 0.18);
+    text-stroke: 1.3px rgba(255, 255, 255, 0.18);
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(12rem, 18vw, 22rem);
-    line-height: 0.8;
+    font-size: clamp(8rem, 14vw, 16rem);
+    line-height: 0.78;
     letter-spacing: -0.04em;
     user-select: none;
-    transition: 0.5s
+    transition:
+        -webkit-text-stroke-color 0.35s ease,
+        text-stroke-color 0.35s ease,
+        filter 0.35s ease;
+}
+
+.process-step:hover .process-step__number {
+    -webkit-text-stroke-color: #b7ff00;
+    text-stroke-color: #b7ff00;
+    filter: drop-shadow(0 0 18px rgba(183, 255, 0, 0.25));
+}
+
+.process-step__content {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
 }
 
 .process-step__content h3 {
     margin: 0;
     color: #b7ff00;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(4.5rem, 7vw, 8.5rem);
-    line-height: 0.88;
+    font-size: clamp(3.8rem, 6vw, 7rem);
+    line-height: 0.9;
     letter-spacing: -0.01em;
     font-weight: 400;
     text-transform: uppercase;
@@ -140,153 +178,106 @@
 
 .process-step__content p {
     max-width: 680px;
-    margin: 32px 0 0;
+    margin: 26px 0 0;
     color: rgba(255, 255, 255, 0.58);
-    font-size: 1.08rem;
-    line-height: 1.85;
+    font-size: 1.05rem;
+    line-height: 1.8;
     font-weight: 500;
 }
 
-/* Dots */
-
+/* Dots não fazem mais sentido sem efeito lateral */
 .process-pin__progress {
-    position: absolute;
-    left: 68px;
-    bottom: 60px;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.process-pin__progress span {
-    width: 8px;
-    height: 8px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.14);
-    transition: 0.3s ease;
-}
-
-.process-pin__progress span.active {
-    width: 38px;
-    background: #b7ff00;
-    box-shadow: 0 0 22px rgba(183, 255, 0, 0.55);
+    display: none !important;
 }
 
 /* =========================================
-   PROCESS PIN - AJUSTE DE LAYOUT E NÚMEROS
+   TABLET
 ========================================= */
 
-/* Título da section fica no topo, sem invadir os steps */
-.process-pin__header {
-    position: absolute;
-    top: 110px;
-    left: 68px;
-    z-index: 20;
-    max-width: 720px;
-}
-
-.process-pin__title {
-    max-width: 760px;
-    font-size: clamp(3.8rem, 5vw, 6.4rem);
-    line-height: 0.88;
-}
-
-/* Desce a área dos passos para não bater no título */
-.process-pin__viewport {
-    padding-top: 170px;
-    box-sizing: border-box;
-}
-
-/* Cada item fica melhor distribuído */
-.process-step {
-    grid-template-columns: 360px minmax(420px, 760px);
-    gap: 110px;
-    padding: 160px 68px 80px;
-    align-items: center;
-}
-
-/* Número vazado SEM preenchimento */
-.process-step__number {
-    color: transparent !important;
-    -webkit-text-fill-color: transparent !important;
-    -webkit-text-stroke: 1.3px rgba(255, 255, 255, 0.18);
-    text-stroke: 1.3px rgba(255, 255, 255, 0.18);
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(13rem, 18vw, 23rem);
-    line-height: 0.72;
-    letter-spacing: -0.04em;
-    user-select: none;
-    transition: -webkit-text-stroke-color 0.35s ease,
-        text-stroke-color 0.35s ease,
-        filter 0.35s ease;
-}
-
-/* Hover atinge SOMENTE o contorno do número */
-.process-step:hover .process-step__number {
-    color: transparent !important;
-    -webkit-text-fill-color: transparent !important;
-    -webkit-text-stroke-color: #b7ff00;
-    text-stroke-color: #b7ff00;
-    filter: drop-shadow(0 0 18px rgba(183, 255, 0, 0.25));
-}
-
-/* Conteúdo do step */
-.process-step__content {
-    position: relative;
-    z-index: 3;
-    max-width: 760px;
-}
-
-.process-step__content h3 {
-    font-size: clamp(4.2rem, 6.2vw, 7.4rem);
-    line-height: 0.9;
-}
-
-.process-step__content p {
-    max-width: 720px;
-    margin-top: 30px;
-    font-size: 1.08rem;
-    line-height: 1.8;
-}
-
-/* Mobile/tablet */
 @media (max-width: 900px) {
+    .process-pin {
+        padding: 86px 0;
+    }
+
+    .process-pin__scroll {
+        width: min(100% - 36px, 720px);
+    }
+
     .process-pin__header {
-        top: 95px;
-        left: 22px;
-        max-width: calc(100% - 44px);
+        margin-bottom: 48px;
+    }
+
+    .process-pin__eyebrow {
+        font-size: 0.68rem;
+        margin-bottom: 14px;
     }
 
     .process-pin__title {
-        font-size: clamp(3rem, 13vw, 4.8rem);
-    }
-
-    .process-pin__viewport {
-        padding-top: 190px;
+        font-size: clamp(3rem, 13vw, 5rem);
     }
 
     .process-step {
         grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 170px 22px 70px;
-        align-content: center;
+        gap: 18px;
+        padding: 40px 0;
+        align-items: start;
     }
 
     .process-step__number {
-        font-size: clamp(7rem, 30vw, 12rem);
+        font-size: clamp(5.8rem, 24vw, 10rem);
         line-height: 0.78;
     }
 
+    .process-step__content {
+        max-width: 100%;
+    }
+
     .process-step__content h3 {
-        font-size: clamp(3.5rem, 15vw, 5.8rem);
+        font-size: clamp(3.2rem, 13vw, 5.4rem);
     }
 
     .process-step__content p {
-        margin-top: 20px;
-        font-size: 0.95rem;
+        max-width: 100%;
+        margin-top: 18px;
+        font-size: 0.96rem;
         line-height: 1.7;
     }
 }
 
+/* =========================================
+   MOBILE PEQUENO
+========================================= */
 
+@media (max-width: 480px) {
+    .process-pin {
+        padding: 76px 0;
+    }
+
+    .process-pin__scroll {
+        width: min(100% - 28px, 720px);
+    }
+
+    .process-pin__header {
+        margin-bottom: 40px;
+    }
+
+    .process-pin__title {
+        font-size: clamp(2.8rem, 16vw, 4.4rem);
+    }
+
+    .process-step {
+        padding: 34px 0;
+    }
+
+    .process-step__number {
+        font-size: clamp(5rem, 28vw, 8.5rem);
+    }
+
+    .process-step__content h3 {
+        font-size: clamp(3rem, 15vw, 4.7rem);
+    }
+
+    .process-step__content p {
+        font-size: 0.92rem;
+    }
+}

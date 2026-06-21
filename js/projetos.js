@@ -4,10 +4,18 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!slider) return;
 
     let isDown = false;
-    let startX;
-    let scrollLeft;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    /*
+        Importante:
+        No celular/tablet, NÃO controlamos o touch via JS.
+        O scroll lateral fica nativo do navegador, muito mais fluido.
+    */
 
     slider.addEventListener("mousedown", (event) => {
+        if (window.innerWidth <= 900) return;
+
         isDown = true;
         slider.classList.add("is-dragging");
 
@@ -31,27 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
 
         const x = event.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 1.4;
-
-        slider.scrollLeft = scrollLeft - walk;
-    });
-
-    slider.addEventListener("touchstart", (event) => {
-        isDown = true;
-        startX = event.touches[0].pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-    }, { passive: true });
-
-    slider.addEventListener("touchend", () => {
-        isDown = false;
-    });
-
-    slider.addEventListener("touchmove", (event) => {
-        if (!isDown) return;
-
-        const x = event.touches[0].pageX - slider.offsetLeft;
         const walk = (x - startX) * 1.2;
 
         slider.scrollLeft = scrollLeft - walk;
-    }, { passive: true });
+    });
+
+    slider.querySelectorAll("img").forEach((img) => {
+        img.setAttribute("draggable", "false");
+    });
 });
